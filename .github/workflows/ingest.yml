@@ -31,3 +31,4 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
         run: npx tsx scripts/ingest.ts "${{ github.event.inputs.max_per_source || '1' }}"
+
