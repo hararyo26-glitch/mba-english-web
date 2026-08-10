@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+body {
+  font-family: system-ui, "Segoe UI", "Hiragino Sans", "Yu Gothic", Roboto, sans-serif;
+}
+
+.diff-word {
+  display: inline-block;
+  padding: 0 2px;
+  border-radius: 4px;
+}

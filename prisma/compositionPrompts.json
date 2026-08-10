@@ -1,0 +1,168 @@
+[
+  {
+    "id": "mtg-01",
+    "category": "mtg_speech",
+    "jp_text": "それには同意しかねます。なぜなら、そのシナリオでは需要の価格弾力性を過小評価しているからです。",
+    "model_answers": [
+      "I have to disagree with that, because that scenario underestimates the price elasticity of demand.",
+      "I'm not sure I agree, since it seems to underestimate how price-sensitive demand actually is."
+    ]
+  },
+  {
+    "id": "mtg-02",
+    "category": "mtg_speech",
+    "jp_text": "その提案には一理ありますが、実行可能性の観点から懸念があります。",
+    "model_answers": [
+      "There's merit to that proposal, but I have concerns about its feasibility.",
+      "That's a fair point, though I'm worried about how realistic it is to implement."
+    ]
+  },
+  {
+    "id": "mtg-03",
+    "category": "mtg_speech",
+    "jp_text": "恐れ入りますが、その前提から確認させてください。",
+    "model_answers": [
+      "Sorry to interrupt, but could we first confirm that assumption?",
+      "Before we go further, can we double-check that assumption?"
+    ]
+  },
+  {
+    "id": "mtg-04",
+    "category": "mtg_speech",
+    "jp_text": "私からもう一点、サステナビリティ報告の観点から追加させてください。",
+    "model_answers": [
+      "Let me add one more point from a sustainability reporting perspective.",
+      "I'd like to build on that with one point on sustainability disclosure."
+    ]
+  },
+  {
+    "id": "mtg-05",
+    "category": "mtg_speech",
+    "jp_text": "この件については、来週までに持ち帰らせていただけますか。",
+    "model_answers": [
+      "Could I take this back and follow up by next week?",
+      "Would it be alright if I circled back on this by next week?"
+    ]
+  },
+  {
+    "id": "structured-01",
+    "category": "structured_discussion",
+    "jp_text": "この投資に反対する理由は3つあります。1つ目は資金回収期間の長さです。",
+    "model_answers": [
+      "There are three reasons I'm against this investment. The first is the length of the payback period."
+    ]
+  },
+  {
+    "id": "structured-02",
+    "category": "structured_discussion",
+    "jp_text": "まず全体像を説明してから、詳細に入らせてください。",
+    "model_answers": [
+      "Let me first walk through the big picture before getting into the details."
+    ]
+  },
+  {
+    "id": "structured-03",
+    "category": "structured_discussion",
+    "jp_text": "結論から言うと、この都市開発案には参入すべきではありません。",
+    "model_answers": [
+      "To cut to the chase, we shouldn't move forward with this urban development plan.",
+      "Bottom line, we should not proceed with this urban development plan."
+    ]
+  },
+  {
+    "id": "structured-04",
+    "category": "structured_discussion",
+    "jp_text": "この論点は大きく2つの軸で整理できます。",
+    "model_answers": [
+      "This issue can be broken down into two main dimensions."
+    ]
+  },
+  {
+    "id": "structured-05",
+    "category": "structured_discussion",
+    "jp_text": "最後に、次のステップについて確認させてください。",
+    "model_answers": [
+      "Finally, let's confirm the next steps."
+    ]
+  },
+  {
+    "id": "data-01",
+    "category": "data_evidence",
+    "jp_text": "この数字が示すのは、若年層の離脱率が想定より高いということです。",
+    "model_answers": [
+      "What this number shows is that the churn rate among younger users is higher than expected."
+    ]
+  },
+  {
+    "id": "data-02",
+    "category": "data_evidence",
+    "jp_text": "このデータによれば、都市部での再エネ需要は今後3年で倍増する見込みです。",
+    "model_answers": [
+      "According to this data, demand for renewable energy in urban areas is expected to double over the next three years."
+    ]
+  },
+  {
+    "id": "data-03",
+    "category": "data_evidence",
+    "jp_text": "サンプルサイズが小さいため、この結果は参考程度に捉えるべきです。",
+    "model_answers": [
+      "Given the small sample size, we should treat this result as merely indicative."
+    ]
+  },
+  {
+    "id": "data-04",
+    "category": "data_evidence",
+    "jp_text": "この相関関係だけでは、因果関係があるとは言えません。",
+    "model_answers": [
+      "This correlation alone doesn't prove causation."
+    ]
+  },
+  {
+    "id": "data-05",
+    "category": "data_evidence",
+    "jp_text": "エビデンスに基づくと、価格よりもブランドへの信頼が購買の決め手になっています。",
+    "model_answers": [
+      "Based on the evidence, brand trust is a bigger purchase driver than price."
+    ]
+  },
+  {
+    "id": "rebuttal-01",
+    "category": "rebuttal_softening",
+    "jp_text": "おっしゃることは理解できますが、別の見方もできると思います。",
+    "model_answers": [
+      "I understand what you're saying, but I think there's another way to look at it."
+    ]
+  },
+  {
+    "id": "rebuttal-02",
+    "category": "rebuttal_softening",
+    "jp_text": "その視点も重要ですが、リスク面も考慮すべきではないでしょうか。",
+    "model_answers": [
+      "That perspective is important, but shouldn't we also consider the risks?"
+    ]
+  },
+  {
+    "id": "rebuttal-03",
+    "category": "rebuttal_softening",
+    "jp_text": "反対するわけではありませんが、もう少し時間をかけて検討したいです。",
+    "model_answers": [
+      "I'm not against it, but I'd like to take a bit more time to think it through."
+    ]
+  },
+  {
+    "id": "rebuttal-04",
+    "category": "rebuttal_softening",
+    "jp_text": "厳しいようですが、このままでは目標達成は難しいと思います。",
+    "model_answers": [
+      "I don't mean to be harsh, but I don't think we'll hit the target as things stand."
+    ]
+  },
+  {
+    "id": "rebuttal-05",
+    "category": "rebuttal_softening",
+    "jp_text": "誤解のないように言うと、計画自体には賛成です。",
+    "model_answers": [
+      "Just to be clear, I do support the plan itself."
+    ]
+  }
+]

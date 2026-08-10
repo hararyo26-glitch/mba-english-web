@@ -1,0 +1,33 @@
+name: Ingest audio sources
+
+# 毎日1回(JST朝7時 = UTC22時)BBC/FT/TEDの新着エピソードを取得・文字起こしする。
+# 手動実行(workflow_dispatch)も可能。
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+    inputs:
+      max_per_source:
+        description: "各ソースから取得する最大件数"
+        required: false
+        default: "1"
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350 # Whisperの文字起こしに時間がかかるため長めに確保
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ingest script
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+        run: npx tsx scripts/ingest.ts "${{ github.event.inputs.max_per_source || '1' }}"

@@ -1,0 +1,89 @@
+// MBA英語ブラッシュアップアプリ (Vercel版) - ディクテーション・瞬間英作文のみ対応
+// AI会話練習・重い音声処理(Whisper)はPCローカル版アプリの担当。
+// 音声取り込みはGitHub Actions(scripts/ingest.mjs)がこのDBに直接書き込む。
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Episode {
+  id               String   @id
+  source           String // "BBC News" | "BBC 6 Minute English" | "FT News Briefing" | "TED Talks"
+  title            String
+  url              String?
+  publishedAt      DateTime?
+  audioUrl         String? // Vercel Blob のURL
+  durationSec      Float?
+  wpm              Float?
+  cefrLevel        String?
+  transcriptStatus String   @default("pending") // pending | downloading | transcribing | done | error
+  createdAt        DateTime @default(now())
+
+  sentences Sentence[]
+
+  @@index([transcriptStatus])
+}
+
+model Sentence {
+  id         Int      @id @default(autoincrement())
+  episode    Episode  @relation(fields: [episodeId], references: [id], onDelete: Cascade)
+  episodeId  String
+  idx        Int
+  text       String
+  audioStart Float
+  audioEnd   Float
+
+  attempts    DictationAttempt[]
+  reviewQueue ReviewQueue?
+
+  @@unique([episodeId, idx])
+  @@index([episodeId])
+}
+
+model DictationAttempt {
+  id          Int      @id @default(autoincrement())
+  sentence    Sentence @relation(fields: [sentenceId], references: [id], onDelete: Cascade)
+  sentenceId  Int
+  userInput   String
+  isCorrect   Boolean
+  diffJson    String // JSON文字列(DiffToken[])
+  attemptedAt DateTime @default(now())
+
+  @@index([sentenceId])
+}
+
+model ReviewQueue {
+  id           Int      @id @default(autoincrement())
+  sentence     Sentence @relation(fields: [sentenceId], references: [id], onDelete: Cascade)
+  sentenceId   Int      @unique
+  nextReviewAt DateTime
+  intervalDays Float    @default(1)
+
+  @@index([nextReviewAt])
+}
+
+model CompositionPrompt {
+  id           String @id
+  category     String
+  jpText       String
+  modelAnswers String // JSON配列
+
+  attempts CompositionAttempt[]
+}
+
+model CompositionAttempt {
+  id          Int               @id @default(autoincrement())
+  prompt      CompositionPrompt @relation(fields: [promptId], references: [id], onDelete: Cascade)
+  promptId    String
+  userAnswer  String
+  score       Int
+  feedback    String
+  attemptedAt DateTime          @default(now())
+
+  @@index([promptId])
+}
