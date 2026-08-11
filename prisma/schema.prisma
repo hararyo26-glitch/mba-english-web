@@ -79,11 +79,30 @@ model ReviewQueue {
 
 model CompositionPrompt {
   id           String @id
+  seq          Int    @unique @default(autoincrement()) // 出題順(投入順)。進捗ポインタの基準に使う
   category     String
   jpText       String
   modelAnswers String // JSON配列
 
-  attempts CompositionAttempt[]
+  attempts    CompositionAttempt[]
+  reviewQueue CompositionReviewQueue?
+}
+
+/** カテゴリ(または全体)ごとの「前回どこまで新規で出題したか」の進捗ポインタ。次回はこの続きから出題する */
+model CompositionProgress {
+  scope     String   @id // カテゴリ名、または未指定時は "__ALL__"
+  lastSeq   Int
+  updatedAt DateTime @updatedAt
+}
+
+/** 実施済みのお題を間隔反復(簡易SM-2)で定期的に復習として再出題するためのキュー */
+model CompositionReviewQueue {
+  prompt       CompositionPrompt @relation(fields: [promptId], references: [id], onDelete: Cascade)
+  promptId     String            @id
+  nextReviewAt DateTime
+  intervalDays Float             @default(1)
+
+  @@index([nextReviewAt])
 }
 
 model CompositionAttempt {

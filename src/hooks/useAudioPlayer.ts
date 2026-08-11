@@ -16,6 +16,11 @@ interface PlayOptions {
  * start/endが指定されている場合は、同じsrcの<audio>要素を使い回しつつ
  * 該当区間だけ再生する(エピソード全体音源から該当センテンスを切り出す用途)。
  */
+// Whisperの単語タイムスタンプは多少前後にずれることがあるため、
+// 頭/末尾が切れて聞こえないよう再生区間に少し余裕を持たせる
+const START_PAD_SEC = 0.15
+const END_PAD_SEC = 0.2
+
 export function useAudioPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const currentSrcRef = useRef<string | undefined>(undefined)
@@ -67,8 +72,9 @@ export function useAudioPlayer() {
       audio.onerror = () => playWithTts()
 
       if (typeof end === 'number') {
+        const paddedEnd = end + END_PAD_SEC
         const onTimeUpdate = () => {
-          if (audio.currentTime >= end) {
+          if (audio.currentTime >= paddedEnd) {
             audio.pause()
             setIsPlaying(false)
           }
@@ -77,7 +83,7 @@ export function useAudioPlayer() {
         audio.addEventListener('timeupdate', onTimeUpdate)
       }
 
-      audio.currentTime = start ?? 0
+      audio.currentTime = typeof start === 'number' ? Math.max(0, start - START_PAD_SEC) : 0
       audio.play().catch(playWithTts)
     },
     [ttsSupported],

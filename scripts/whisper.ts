@@ -46,30 +46,43 @@ export async function transcribe(samples16k: Float32Array): Promise<Transcriptio
 
 const SENTENCE_END = /[.!?]["')\]]?$/
 
+// Whisper(tiny.en)の単語タイムスタンプは前後に少しずれることがあるため、
+// 文の頭/末尾が切れて聞こえないよう再生区間に余裕(パディング)を持たせる。
+// ただし隣接する文の音声に食い込まないよう、隣の単語の境界を超えないようクランプする。
+const START_PAD_SEC = 0.15
+const END_PAD_SEC = 0.2
+
 export function groupWordsIntoSentences(
   words: WordTiming[],
 ): { text: string; audioStart: number; audioEnd: number }[] {
-  const sentences: { text: string; audioStart: number; audioEnd: number }[] = []
+  const groups: WordTiming[][] = []
   let buffer: WordTiming[] = []
 
   for (const word of words) {
     buffer.push(word)
     if (SENTENCE_END.test(word.text) || buffer.length >= 30) {
-      sentences.push(finalizeSentence(buffer))
+      groups.push(buffer)
       buffer = []
     }
   }
   if (buffer.length > 0) {
-    sentences.push(finalizeSentence(buffer))
+    groups.push(buffer)
   }
 
-  return sentences.filter((s) => s.text.length > 0)
+  return groups
+    .map((buf, i) => finalizeSentence(buf, groups[i - 1], groups[i + 1]))
+    .filter((s) => s.text.length > 0)
 }
 
-function finalizeSentence(buffer: WordTiming[]) {
+function finalizeSentence(buffer: WordTiming[], prevGroup?: WordTiming[], nextGroup?: WordTiming[]) {
+  const rawStart = buffer[0].start
+  const rawEnd = buffer[buffer.length - 1].end
+  const prevEnd = prevGroup ? prevGroup[prevGroup.length - 1].end : 0
+  const nextStart = nextGroup ? nextGroup[0].start : rawEnd + END_PAD_SEC
+
   return {
     text: buffer.map((w) => w.text).join(' '),
-    audioStart: buffer[0].start,
-    audioEnd: buffer[buffer.length - 1].end,
+    audioStart: Math.max(prevEnd, rawStart - START_PAD_SEC),
+    audioEnd: Math.min(nextStart, rawEnd + END_PAD_SEC),
   }
 }

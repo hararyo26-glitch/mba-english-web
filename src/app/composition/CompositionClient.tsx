@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
-  fetchRandomCompositionPromptAction,
+  fetchNextCompositionPromptAction,
   submitCompositionAttemptAction,
 } from "@/lib/actions/composition-actions";
 import { useSpeechRecognition } from "@/hooks/useSpeechRecognition";
@@ -50,7 +50,7 @@ export function CompositionClient() {
     setPhase("countdown");
     setSecondsLeft(THINK_SECONDS);
     try {
-      const p = await fetchRandomCompositionPromptAction();
+      const p = await fetchNextCompositionPromptAction();
       setPrompt(p);
     } catch (err) {
       setError(String((err as Error).message ?? err));
@@ -113,6 +113,13 @@ export function CompositionClient() {
     speech.start((finalText) => {
       setAnswer((prev) => (prev ? `${prev} ${finalText}` : finalText));
     });
+  }
+
+  // 採点ボタンを押すまでは、何度でも録音し直したり入力をリセットしたりできるようにする
+  function handleReset() {
+    if (speech.isListening) speech.stop();
+    setAnswer("");
+    if (useTyping) setTimeout(() => inputRef.current?.focus(), 0);
   }
 
   if (loading) return <p className="text-slate-400">読み込み中…</p>;
@@ -189,13 +196,23 @@ export function CompositionClient() {
             />
           )}
 
-          <button
-            type="button"
-            onClick={() => handleSubmit(answer)}
-            className="w-full rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold py-3 transition-colors"
-          >
-            この内容で採点する
-          </button>
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={handleReset}
+              disabled={!answer && !speech.isListening}
+              className="shrink-0 rounded-xl border border-slate-700 px-4 font-semibold text-slate-300 hover:border-rose-400 hover:text-rose-300 disabled:opacity-40 transition-colors"
+            >
+              🔄 リセット
+            </button>
+            <button
+              type="button"
+              onClick={() => handleSubmit(answer)}
+              className="flex-1 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold py-3 transition-colors"
+            >
+              この内容で採点する
+            </button>
+          </div>
 
           {speech.isSupported && (
             <button

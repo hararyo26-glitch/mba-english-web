@@ -49,7 +49,7 @@ export function DictationSession({
   const [rate, setRate] = useState<PlaybackRate>(1);
   const [translation, setTranslation] = useState<string | null>(null);
   const [translating, setTranslating] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
 
   const resolveAudioSrc = useCallback(
     (sentenceAudioUrl?: string) => sentenceAudioUrl ?? episodeAudioUrl ?? undefined,

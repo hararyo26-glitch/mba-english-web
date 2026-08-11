@@ -17,7 +17,9 @@ export function useSpeechRecognition(lang = 'en-US') {
       if (!Ctor) return
       const recognition = new Ctor()
       recognition.lang = lang
-      recognition.continuous = false
+      // false だと一瞬の間(ポーズ)で自動的に聞き取りが終了してしまい、
+      // 録音時間が短く感じられる原因になっていたため、ボタンで止めるまで聞き続けるようにする
+      recognition.continuous = true
       recognition.interimResults = true
 
       recognition.onresult = (event) => {
