@@ -24,6 +24,7 @@ interface SelectedSession {
   title: string;
   sentences: SentenceData[];
   episodeAudioUrl: string | null;
+  startIndex: number;
 }
 
 interface Props {
@@ -48,6 +49,7 @@ export function DictationClient({ initialEpisodes, initialReviewItems }: Props) 
         title: detail.title,
         episodeAudioUrl: detail.audioUrl,
         sentences: detail.sentences,
+        startIndex: detail.startIndex,
       });
     } catch (err) {
       setError(String((err as Error).message ?? err));
@@ -60,6 +62,7 @@ export function DictationClient({ initialEpisodes, initialReviewItems }: Props) 
     setSession({
       title: "今日の復習",
       episodeAudioUrl: null,
+      startIndex: 0,
       sentences: reviewItems.map((item, i) => ({
         dbId: item.sentenceId,
         index: i,
@@ -87,6 +90,7 @@ export function DictationClient({ initialEpisodes, initialReviewItems }: Props) 
         title={session.title}
         sentences={session.sentences}
         episodeAudioUrl={session.episodeAudioUrl}
+        startIndex={session.startIndex}
         onBackToList={handleBackToList}
       />
     );

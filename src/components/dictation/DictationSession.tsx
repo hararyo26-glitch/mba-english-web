@@ -3,8 +3,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useAudioPlayer } from "@/hooks/useAudioPlayer";
 import { useDictationSession, type SentenceData } from "@/hooks/useDictationSession";
-import { recordDictationAttemptAction } from "@/lib/actions/dictation-actions";
+import {
+  recordDictationAttemptAction,
+  translateSentenceAction,
+} from "@/lib/actions/dictation-actions";
 import { SentenceProgressBar } from "./SentenceProgressBar";
+import { SentenceNavigator } from "./SentenceNavigator";
 import { AudioControls, type PlaybackRate } from "./AudioControls";
 import { AnswerInput } from "./AnswerInput";
 import { DiffResult } from "./DiffResult";
@@ -14,10 +18,17 @@ interface Props {
   title: string;
   sentences: SentenceData[];
   episodeAudioUrl?: string | null;
+  startIndex?: number;
   onBackToList: () => void;
 }
 
-export function DictationSession({ title, sentences, episodeAudioUrl, onBackToList }: Props) {
+export function DictationSession({
+  title,
+  sentences,
+  episodeAudioUrl,
+  startIndex = 0,
+  onBackToList,
+}: Props) {
   const {
     currentSentence,
     currentIndex,
@@ -27,13 +38,17 @@ export function DictationSession({ title, sentences, episodeAudioUrl, onBackToLi
     setUserInput,
     submitAnswer,
     nextSentence,
+    goToSentence,
     restart,
     attempts,
+    attemptByIndex,
     lastResult,
-  } = useDictationSession(sentences);
+  } = useDictationSession(sentences, startIndex);
 
   const { play, isPlaying } = useAudioPlayer();
   const [rate, setRate] = useState<PlaybackRate>(1);
+  const [translation, setTranslation] = useState<string | null>(null);
+  const [translating, setTranslating] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const resolveAudioSrc = useCallback(
@@ -53,6 +68,7 @@ export function DictationSession({ title, sentences, episodeAudioUrl, onBackToLi
   }, [currentSentence, play, rate, resolveAudioSrc]);
 
   useEffect(() => {
+    setTranslation(null);
     if (phase === "input" && currentSentence) {
       handlePlay();
       inputRef.current?.focus();
@@ -91,6 +107,19 @@ export function DictationSession({ title, sentences, episodeAudioUrl, onBackToLi
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [phase, nextSentence, handlePlay]);
 
+  async function handleShowTranslation() {
+    if (!lastResult || translating) return;
+    setTranslating(true);
+    try {
+      const ja = await translateSentenceAction(lastResult.sentenceDbId);
+      setTranslation(ja);
+    } catch {
+      setTranslation("(和訳の取得に失敗しました)");
+    } finally {
+      setTranslating(false);
+    }
+  }
+
   if (phase === "summary") {
     return (
       <SummaryScreen
@@ -118,6 +147,12 @@ export function DictationSession({ title, sentences, episodeAudioUrl, onBackToLi
       </div>
 
       <SentenceProgressBar current={currentIndex} total={total} />
+      <SentenceNavigator
+        total={total}
+        currentIndex={currentIndex}
+        attemptByIndex={attemptByIndex}
+        onSelect={goToSentence}
+      />
       <AudioControls isPlaying={isPlaying} rate={rate} onRateChange={setRate} onPlay={handlePlay} />
       <AnswerInput
         ref={inputRef}
@@ -127,7 +162,26 @@ export function DictationSession({ title, sentences, episodeAudioUrl, onBackToLi
         disabled={phase === "result"}
       />
 
-      {phase === "result" && lastResult && <DiffResult result={lastResult} />}
+      {phase === "result" && lastResult && (
+        <div className="space-y-3">
+          <DiffResult result={lastResult} />
+          {translation ? (
+            <div className="rounded-xl border border-indigo-500/30 bg-indigo-500/10 p-4">
+              <p className="text-xs text-indigo-300 mb-1">和訳(AI自動翻訳)</p>
+              <p className="text-slate-100">{translation}</p>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={handleShowTranslation}
+              disabled={translating}
+              className="text-xs text-slate-500 hover:text-sky-400 underline disabled:opacity-50"
+            >
+              {translating ? "和訳を生成中…" : "🇯🇵 和訳を見る(AI自動翻訳)"}
+            </button>
+          )}
+        </div>
+      )}
 
       <div className="hidden sm:flex gap-3">
         {phase === "input" ? (

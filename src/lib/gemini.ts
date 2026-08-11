@@ -74,3 +74,26 @@ export async function scoreCompositionWithGemini(
     feedback: parsed.feedback,
   };
 }
+
+/** ディクテーションの答え合わせ時に表示する和訳(自然な日本語1文)を生成する */
+export async function translateToJapanese(englishText: string): Promise<string> {
+  const ai = getClient();
+  const model = process.env.GEMINI_MODEL || "gemini-3.6-flash";
+
+  const response = await ai.models.generateContent({
+    model,
+    contents: englishText,
+    config: {
+      systemInstruction:
+        "You are a professional English-to-Japanese translator for business/MBA content. " +
+        "Translate the given English sentence into natural, fluent Japanese. " +
+        "Output only the Japanese translation, nothing else — no explanations, no quotes.",
+      maxOutputTokens: 512,
+      thinkingConfig: { thinkingLevel: ThinkingLevel.LOW },
+    },
+  });
+
+  const text = response.text?.trim();
+  if (!text) throw new Error("和訳の生成に失敗しました");
+  return text;
+}

@@ -25,24 +25,34 @@ model Episode {
   createdAt        DateTime @default(now())
 
   sentences Sentence[]
+  progress  EpisodeProgress?
 
   @@index([transcriptStatus])
 }
 
 model Sentence {
-  id         Int      @id @default(autoincrement())
-  episode    Episode  @relation(fields: [episodeId], references: [id], onDelete: Cascade)
-  episodeId  String
-  idx        Int
-  text       String
-  audioStart Float
-  audioEnd   Float
+  id           Int      @id @default(autoincrement())
+  episode      Episode  @relation(fields: [episodeId], references: [id], onDelete: Cascade)
+  episodeId    String
+  idx          Int
+  text         String
+  audioStart   Float
+  audioEnd     Float
+  translationJa String? // AI自動翻訳のキャッシュ(答え合わせ時に表示)
 
   attempts    DictationAttempt[]
   reviewQueue ReviewQueue?
 
   @@unique([episodeId, idx])
   @@index([episodeId])
+}
+
+/** エピソードごとの最終回答位置。次回はこの続きから出題する */
+model EpisodeProgress {
+  episode   Episode  @relation(fields: [episodeId], references: [id], onDelete: Cascade)
+  episodeId String   @id
+  lastIndex Int
+  updatedAt DateTime @updatedAt
 }
 
 model DictationAttempt {
