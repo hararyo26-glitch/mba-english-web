@@ -45,6 +45,66 @@
     ]
   },
   {
+    "id": "mtg-06",
+    "category": "mtg_speech",
+    "jp_text": "少し話を戻しますが、先ほどの数字についてもう一度確認させてください。",
+    "model_answers": [
+      "Just to backtrack a bit, could we go over that number again?",
+      "Sorry to go back, but can we double-check that number once more?"
+    ]
+  },
+  {
+    "id": "mtg-07",
+    "category": "mtg_speech",
+    "jp_text": "時間の都合上、この議題は次回に持ち越しませんか。",
+    "model_answers": [
+      "Given the time, shall we carry this agenda item over to next time?",
+      "Since we're running short on time, could we push this item to the next meeting?"
+    ]
+  },
+  {
+    "id": "mtg-08",
+    "category": "mtg_speech",
+    "jp_text": "この場で決めるのではなく、オフラインで詰めましょう。",
+    "model_answers": [
+      "Instead of deciding this here, let's hash it out offline.",
+      "Let's not settle this in the meeting — we can work out the details offline."
+    ]
+  },
+  {
+    "id": "mtg-09",
+    "category": "mtg_speech",
+    "jp_text": "皆さんのご意見を伺う前に、私から簡単に背景を共有させてください。",
+    "model_answers": [
+      "Before I hear everyone's thoughts, let me quickly share some background."
+    ]
+  },
+  {
+    "id": "mtg-10",
+    "category": "mtg_speech",
+    "jp_text": "それでは、ここまでの内容を簡単にまとめさせてください。",
+    "model_answers": [
+      "Let me quickly summarize what we've covered so far."
+    ]
+  },
+  {
+    "id": "mtg-11",
+    "category": "mtg_speech",
+    "jp_text": "すみません、通信が不安定なので、もう一度お願いできますか。",
+    "model_answers": [
+      "Sorry, my connection is unstable — could you say that again?"
+    ]
+  },
+  {
+    "id": "mtg-12",
+    "category": "mtg_speech",
+    "jp_text": "私も同じ意見です。付け加えることは特にありません。",
+    "model_answers": [
+      "I share the same view. I don't have much to add.",
+      "I'm on the same page — nothing further to add from me."
+    ]
+  },
+  {
     "id": "structured-01",
     "category": "structured_discussion",
     "jp_text": "この投資に反対する理由は3つあります。1つ目は資金回収期間の長さです。",
@@ -83,6 +143,62 @@
     "jp_text": "最後に、次のステップについて確認させてください。",
     "model_answers": [
       "Finally, let's confirm the next steps."
+    ]
+  },
+  {
+    "id": "structured-06",
+    "category": "structured_discussion",
+    "jp_text": "論点を整理すると、コストと品質のトレードオフが焦点になります。",
+    "model_answers": [
+      "To organize the points, the core issue is the trade-off between cost and quality."
+    ]
+  },
+  {
+    "id": "structured-07",
+    "category": "structured_discussion",
+    "jp_text": "この議論には前提が2つあります。まず市場が成長し続けるという前提です。",
+    "model_answers": [
+      "There are two assumptions underlying this discussion. First, that the market keeps growing."
+    ]
+  },
+  {
+    "id": "structured-08",
+    "category": "structured_discussion",
+    "jp_text": "一旦ここまでの論点をまとめてから、次の議題に移りましょう。",
+    "model_answers": [
+      "Let's summarize the points so far before moving to the next topic."
+    ]
+  },
+  {
+    "id": "structured-09",
+    "category": "structured_discussion",
+    "jp_text": "賛成派・反対派、両方の意見を整理してから判断しましょう。",
+    "model_answers": [
+      "Let's lay out both the arguments for and against before we decide."
+    ]
+  },
+  {
+    "id": "structured-10",
+    "category": "structured_discussion",
+    "jp_text": "この提案の強みと弱みを、それぞれ簡潔に説明します。",
+    "model_answers": [
+      "Let me briefly walk through the strengths and weaknesses of this proposal."
+    ]
+  },
+  {
+    "id": "structured-11",
+    "category": "structured_discussion",
+    "jp_text": "話が少しそれましたので、本題に戻りましょう。",
+    "model_answers": [
+      "We've gotten a bit off track, so let's get back to the main point."
+    ]
+  },
+  {
+    "id": "structured-12",
+    "category": "structured_discussion",
+    "jp_text": "優先順位をつけるなら、コスト削減が最初に来るべきです。",
+    "model_answers": [
+      "If we're prioritizing, cost reduction should come first."
     ]
   },
   {
@@ -126,6 +242,62 @@
     ]
   },
   {
+    "id": "data-06",
+    "category": "data_evidence",
+    "jp_text": "このグラフから、第2四半期に売上が急落したことが読み取れます。",
+    "model_answers": [
+      "This graph shows that sales dropped sharply in the second quarter."
+    ]
+  },
+  {
+    "id": "data-07",
+    "category": "data_evidence",
+    "jp_text": "アンケート結果を見ると、価格よりも使いやすさを重視する顧客が多いです。",
+    "model_answers": [
+      "The survey results show that most customers value usability over price."
+    ]
+  },
+  {
+    "id": "data-08",
+    "category": "data_evidence",
+    "jp_text": "過去のトレンドを踏まえると、今後も同様のパターンが続くと予測できます。",
+    "model_answers": [
+      "Based on past trends, we can expect a similar pattern to continue."
+    ]
+  },
+  {
+    "id": "data-09",
+    "category": "data_evidence",
+    "jp_text": "この仮説を裏付けるには、もう少しサンプル数が必要です。",
+    "model_answers": [
+      "We need a larger sample size to support this hypothesis."
+    ]
+  },
+  {
+    "id": "data-10",
+    "category": "data_evidence",
+    "jp_text": "数字だけでなく、定性的なフィードバックも踏まえて判断すべきです。",
+    "model_answers": [
+      "We should factor in qualitative feedback, not just the numbers."
+    ]
+  },
+  {
+    "id": "data-11",
+    "category": "data_evidence",
+    "jp_text": "このベンチマークと比較すると、我々の数値はまだ改善の余地があります。",
+    "model_answers": [
+      "Compared to this benchmark, there's still room for improvement in our numbers."
+    ]
+  },
+  {
+    "id": "data-12",
+    "category": "data_evidence",
+    "jp_text": "外れ値を除外すると、傾向はもっとはっきり見えてきます。",
+    "model_answers": [
+      "If we exclude the outliers, the trend becomes much clearer."
+    ]
+  },
+  {
     "id": "rebuttal-01",
     "category": "rebuttal_softening",
     "jp_text": "おっしゃることは理解できますが、別の見方もできると思います。",
@@ -163,6 +335,447 @@
     "jp_text": "誤解のないように言うと、計画自体には賛成です。",
     "model_answers": [
       "Just to be clear, I do support the plan itself."
+    ]
+  },
+  {
+    "id": "rebuttal-06",
+    "category": "rebuttal_softening",
+    "jp_text": "個人的な意見ですが、そのアプローチは少しリスクが高いように感じます。",
+    "model_answers": [
+      "This is just my personal take, but that approach feels a bit risky to me."
+    ]
+  },
+  {
+    "id": "rebuttal-07",
+    "category": "rebuttal_softening",
+    "jp_text": "良い提案だとは思いますが、タイミングとして今は適切でしょうか。",
+    "model_answers": [
+      "It's a good proposal, but is now really the right timing?"
+    ]
+  },
+  {
+    "id": "rebuttal-08",
+    "category": "rebuttal_softening",
+    "jp_text": "完全に否定するつもりはありませんが、もう少しデータが欲しいところです。",
+    "model_answers": [
+      "I'm not dismissing it entirely, but I'd like to see a bit more data."
+    ]
+  },
+  {
+    "id": "rebuttal-09",
+    "category": "rebuttal_softening",
+    "jp_text": "そういう考え方もあるとは思いますが、私は少し違う意見です。",
+    "model_answers": [
+      "I see where you're coming from, but I have a slightly different view."
+    ]
+  },
+  {
+    "id": "rebuttal-10",
+    "category": "rebuttal_softening",
+    "jp_text": "気を悪くしないでほしいのですが、そのやり方だとうまくいかない気がします。",
+    "model_answers": [
+      "I don't mean any offense, but I don't think that approach will work."
+    ]
+  },
+  {
+    "id": "rebuttal-11",
+    "category": "rebuttal_softening",
+    "jp_text": "おっしゃる通りの部分もありますが、全面的には賛成しかねます。",
+    "model_answers": [
+      "You do have a point, but I can't fully agree overall."
+    ]
+  },
+  {
+    "id": "rebuttal-12",
+    "category": "rebuttal_softening",
+    "jp_text": "反論するようで恐縮ですが、その前提には少し無理があると思います。",
+    "model_answers": [
+      "Sorry to push back, but I think that assumption is a bit of a stretch."
+    ]
+  },
+  {
+    "id": "daily-smalltalk-01",
+    "category": "daily_smalltalk",
+    "jp_text": "週末は何してたの?",
+    "model_answers": [
+      "What did you get up to over the weekend?",
+      "What did you do this past weekend?"
+    ]
+  },
+  {
+    "id": "daily-smalltalk-02",
+    "category": "daily_smalltalk",
+    "jp_text": "最近仕事は忙しい?",
+    "model_answers": [
+      "Have you been busy with work lately?"
+    ]
+  },
+  {
+    "id": "daily-smalltalk-03",
+    "category": "daily_smalltalk",
+    "jp_text": "このあたりでおすすめのカフェとかある?",
+    "model_answers": [
+      "Do you know any good cafes around here?"
+    ]
+  },
+  {
+    "id": "daily-smalltalk-04",
+    "category": "daily_smalltalk",
+    "jp_text": "今日はいつもより寒いね。",
+    "model_answers": [
+      "It's colder than usual today, isn't it?"
+    ]
+  },
+  {
+    "id": "daily-smalltalk-05",
+    "category": "daily_smalltalk",
+    "jp_text": "休暇はどこか行く予定はあるの?",
+    "model_answers": [
+      "Are you planning to go anywhere for the holidays?"
+    ]
+  },
+  {
+    "id": "daily-smalltalk-06",
+    "category": "daily_smalltalk",
+    "jp_text": "最近何かハマってることある?",
+    "model_answers": [
+      "Is there anything you've been really into lately?"
+    ]
+  },
+  {
+    "id": "daily-smalltalk-07",
+    "category": "daily_smalltalk",
+    "jp_text": "そのカバン、素敵だね。どこで買ったの?",
+    "model_answers": [
+      "That's a nice bag — where did you get it?"
+    ]
+  },
+  {
+    "id": "daily-smalltalk-08",
+    "category": "daily_smalltalk",
+    "jp_text": "通勤にどれくらい時間かかるの?",
+    "model_answers": [
+      "How long does your commute take?"
+    ]
+  },
+  {
+    "id": "daily-smalltalk-09",
+    "category": "daily_smalltalk",
+    "jp_text": "この辺に住んで長いの?",
+    "model_answers": [
+      "Have you lived around here for long?"
+    ]
+  },
+  {
+    "id": "daily-smalltalk-10",
+    "category": "daily_smalltalk",
+    "jp_text": "最近見た映画で面白かったのある?",
+    "model_answers": [
+      "Have you seen any good movies recently?"
+    ]
+  },
+  {
+    "id": "daily-smalltalk-11",
+    "category": "daily_smalltalk",
+    "jp_text": "お子さんは元気にしてる?",
+    "model_answers": [
+      "How are your kids doing?"
+    ]
+  },
+  {
+    "id": "daily-smalltalk-12",
+    "category": "daily_smalltalk",
+    "jp_text": "今日は早く帰れそう?",
+    "model_answers": [
+      "Do you think you'll be able to leave early today?"
+    ]
+  },
+  {
+    "id": "daily-requests-01",
+    "category": "daily_requests",
+    "jp_text": "もしよければ、これ手伝ってもらえないかな。",
+    "model_answers": [
+      "If you don't mind, could you give me a hand with this?"
+    ]
+  },
+  {
+    "id": "daily-requests-02",
+    "category": "daily_requests",
+    "jp_text": "悪いんだけど、後で電話かけ直してもらえる?",
+    "model_answers": [
+      "Sorry to ask, but could you call me back later?"
+    ]
+  },
+  {
+    "id": "daily-requests-03",
+    "category": "daily_requests",
+    "jp_text": "ちょっとお願いがあるんだけど、今大丈夫?",
+    "model_answers": [
+      "I have a favor to ask — do you have a minute?"
+    ]
+  },
+  {
+    "id": "daily-requests-04",
+    "category": "daily_requests",
+    "jp_text": "空港まで送ってもらうことってできる?",
+    "model_answers": [
+      "Would you be able to drop me off at the airport?"
+    ]
+  },
+  {
+    "id": "daily-requests-05",
+    "category": "daily_requests",
+    "jp_text": "この書類、確認してもらえると助かります。",
+    "model_answers": [
+      "It would help if you could take a look at this document."
+    ]
+  },
+  {
+    "id": "daily-requests-06",
+    "category": "daily_requests",
+    "jp_text": "会議の時間、少し早められますか。",
+    "model_answers": [
+      "Would it be possible to move the meeting up a bit?"
+    ]
+  },
+  {
+    "id": "daily-requests-07",
+    "category": "daily_requests",
+    "jp_text": "もし手が空いたら、これ見てもらえますか。",
+    "model_answers": [
+      "Whenever you get a chance, could you take a look at this?"
+    ]
+  },
+  {
+    "id": "daily-requests-08",
+    "category": "daily_requests",
+    "jp_text": "静かにしてもらえますか。集中したいので。",
+    "model_answers": [
+      "Would you mind keeping it down? I'm trying to concentrate."
+    ]
+  },
+  {
+    "id": "daily-requests-09",
+    "category": "daily_requests",
+    "jp_text": "すみません、道を教えてもらえますか。",
+    "model_answers": [
+      "Excuse me, could you tell me how to get there?"
+    ]
+  },
+  {
+    "id": "daily-requests-10",
+    "category": "daily_requests",
+    "jp_text": "少し窓を開けてもいいですか。",
+    "model_answers": [
+      "Would it be alright if I opened the window a little?"
+    ]
+  },
+  {
+    "id": "daily-requests-11",
+    "category": "daily_requests",
+    "jp_text": "来週火曜、休みをもらえますか。",
+    "model_answers": [
+      "Could I take the day off next Tuesday?"
+    ]
+  },
+  {
+    "id": "daily-requests-12",
+    "category": "daily_requests",
+    "jp_text": "これ、代わりにやってもらってもいい?",
+    "model_answers": [
+      "Would you mind doing this for me instead?"
+    ]
+  },
+  {
+    "id": "daily-opinions-01",
+    "category": "daily_opinions",
+    "jp_text": "個人的には、在宅勤務の方が集中できると思う。",
+    "model_answers": [
+      "Personally, I think I can focus better when working from home."
+    ]
+  },
+  {
+    "id": "daily-opinions-02",
+    "category": "daily_opinions",
+    "jp_text": "そのレストラン、思ったより良くなかったな。",
+    "model_answers": [
+      "That restaurant wasn't as good as I expected."
+    ]
+  },
+  {
+    "id": "daily-opinions-03",
+    "category": "daily_opinions",
+    "jp_text": "正直、その映画はあまり好みじゃなかった。",
+    "model_answers": [
+      "Honestly, that movie wasn't really my thing."
+    ]
+  },
+  {
+    "id": "daily-opinions-04",
+    "category": "daily_opinions",
+    "jp_text": "私はどちらかというと、朝型の方が好き。",
+    "model_answers": [
+      "I'm more of a morning person, if anything."
+    ]
+  },
+  {
+    "id": "daily-opinions-05",
+    "category": "daily_opinions",
+    "jp_text": "このアプリ、使いやすいと思う?",
+    "model_answers": [
+      "Do you find this app easy to use?"
+    ]
+  },
+  {
+    "id": "daily-opinions-06",
+    "category": "daily_opinions",
+    "jp_text": "私だったら、その提案には乗らないかな。",
+    "model_answers": [
+      "If it were me, I wouldn't go along with that idea."
+    ]
+  },
+  {
+    "id": "daily-opinions-07",
+    "category": "daily_opinions",
+    "jp_text": "そのニュース、ちょっと信じがたいよね。",
+    "model_answers": [
+      "That news is kind of hard to believe, isn't it?"
+    ]
+  },
+  {
+    "id": "daily-opinions-08",
+    "category": "daily_opinions",
+    "jp_text": "私はコーヒーより紅茶派かな。",
+    "model_answers": [
+      "I'm more of a tea person than a coffee person."
+    ]
+  },
+  {
+    "id": "daily-opinions-09",
+    "category": "daily_opinions",
+    "jp_text": "それについては、賛否両論あると思う。",
+    "model_answers": [
+      "I think opinions are pretty split on that."
+    ]
+  },
+  {
+    "id": "daily-opinions-10",
+    "category": "daily_opinions",
+    "jp_text": "この街に住んでみて、思ったより住みやすいと感じた。",
+    "model_answers": [
+      "Living in this city, I found it more livable than I expected."
+    ]
+  },
+  {
+    "id": "daily-opinions-11",
+    "category": "daily_opinions",
+    "jp_text": "そのやり方は、ちょっと古いと思わない?",
+    "model_answers": [
+      "Don't you think that way of doing things is a bit outdated?"
+    ]
+  },
+  {
+    "id": "daily-opinions-12",
+    "category": "daily_opinions",
+    "jp_text": "私は特にこだわりはないから、どっちでもいいよ。",
+    "model_answers": [
+      "I don't have a strong preference, so either is fine with me."
+    ]
+  },
+  {
+    "id": "daily-plans-01",
+    "category": "daily_plans",
+    "jp_text": "今度の土曜日、空いてる?",
+    "model_answers": [
+      "Are you free this coming Saturday?"
+    ]
+  },
+  {
+    "id": "daily-plans-02",
+    "category": "daily_plans",
+    "jp_text": "来週のどこかでランチでもどう?",
+    "model_answers": [
+      "How about grabbing lunch sometime next week?"
+    ]
+  },
+  {
+    "id": "daily-plans-03",
+    "category": "daily_plans",
+    "jp_text": "予定が変わったから、来週に延期してもいい?",
+    "model_answers": [
+      "My plans changed — could we push it to next week?"
+    ]
+  },
+  {
+    "id": "daily-plans-04",
+    "category": "daily_plans",
+    "jp_text": "その日は先約があるから、別の日にしてもらえる?",
+    "model_answers": [
+      "I already have plans that day, so could we pick another day?"
+    ]
+  },
+  {
+    "id": "daily-plans-05",
+    "category": "daily_plans",
+    "jp_text": "何時に集合する?",
+    "model_answers": [
+      "What time should we meet up?"
+    ]
+  },
+  {
+    "id": "daily-plans-06",
+    "category": "daily_plans",
+    "jp_text": "天気が悪そうだから、予定を変えた方がいいかも。",
+    "model_answers": [
+      "The weather doesn't look great, so maybe we should change our plans."
+    ]
+  },
+  {
+    "id": "daily-plans-07",
+    "category": "daily_plans",
+    "jp_text": "直前になって申し訳ないけど、キャンセルしてもいい?",
+    "model_answers": [
+      "I'm sorry for the short notice, but could I cancel?"
+    ]
+  },
+  {
+    "id": "daily-plans-08",
+    "category": "daily_plans",
+    "jp_text": "一応、予備日も決めておこうか。",
+    "model_answers": [
+      "Should we go ahead and set a backup date, just in case?"
+    ]
+  },
+  {
+    "id": "daily-plans-09",
+    "category": "daily_plans",
+    "jp_text": "そろそろ日程を決めないといけないね。",
+    "model_answers": [
+      "We should probably lock in a date soon."
+    ]
+  },
+  {
+    "id": "daily-plans-10",
+    "category": "daily_plans",
+    "jp_text": "来月あたり、旅行の計画を立てようと思ってる。",
+    "model_answers": [
+      "I'm thinking of planning a trip sometime next month."
+    ]
+  },
+  {
+    "id": "daily-plans-11",
+    "category": "daily_plans",
+    "jp_text": "その予定、私は参加できるかまだわからない。",
+    "model_answers": [
+      "I'm not sure yet if I can make it to that."
+    ]
+  },
+  {
+    "id": "daily-plans-12",
+    "category": "daily_plans",
+    "jp_text": "もし都合が悪くなったら、早めに教えてね。",
+    "model_answers": [
+      "If it doesn't work out for you, just let me know early."
     ]
   }
 ]

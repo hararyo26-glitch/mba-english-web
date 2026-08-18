@@ -26,6 +26,10 @@ const CATEGORY_LABELS: Record<string, string> = {
   structured_discussion: "構造化発言",
   data_evidence: "データ・論拠の提示",
   rebuttal_softening: "反論・軟化表現",
+  daily_smalltalk: "日常会話・雑談",
+  daily_requests: "日常会話・お願い",
+  daily_opinions: "日常会話・意見",
+  daily_plans: "日常会話・予定調整",
 };
 
 export function CompositionClient() {
