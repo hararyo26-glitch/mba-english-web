@@ -6,6 +6,16 @@
     "model_answers": [
       "I have to disagree with that, because that scenario underestimates the price elasticity of demand.",
       "I'm not sure I agree, since it seems to underestimate how price-sensitive demand actually is."
+    ],
+    "expressions": [
+      {
+        "phrase": "I have to disagree with that",
+        "explanation": "それには同意しかねます。丁寧に反対する定番。"
+      },
+      {
+        "phrase": "price elasticity of demand",
+        "explanation": "需要の価格弾力性。経済学の基本用語。"
+      }
     ]
   },
   {
@@ -15,6 +25,16 @@
     "model_answers": [
       "There's merit to that proposal, but I have concerns about its feasibility.",
       "That's a fair point, though I'm worried about how realistic it is to implement."
+    ],
+    "expressions": [
+      {
+        "phrase": "There's merit to",
+        "explanation": "〜には一理ある。"
+      },
+      {
+        "phrase": "feasibility",
+        "explanation": "実行可能性。"
+      }
     ]
   },
   {
@@ -24,6 +44,16 @@
     "model_answers": [
       "Sorry to interrupt, but could we first confirm that assumption?",
       "Before we go further, can we double-check that assumption?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Sorry to interrupt, but",
+        "explanation": "お話し中すみませんが。割り込みの前置き。"
+      },
+      {
+        "phrase": "double-check",
+        "explanation": "再確認する。"
+      }
     ]
   },
   {
@@ -33,6 +63,16 @@
     "model_answers": [
       "Let me add one more point from a sustainability reporting perspective.",
       "I'd like to build on that with one point on sustainability disclosure."
+    ],
+    "expressions": [
+      {
+        "phrase": "build on",
+        "explanation": "〜を土台にして発展させる。"
+      },
+      {
+        "phrase": "Let me add one more point",
+        "explanation": "もう一点付け加えさせてください。"
+      }
     ]
   },
   {
@@ -42,6 +82,16 @@
     "model_answers": [
       "Could I take this back and follow up by next week?",
       "Would it be alright if I circled back on this by next week?"
+    ],
+    "expressions": [
+      {
+        "phrase": "take this back",
+        "explanation": "持ち帰る。"
+      },
+      {
+        "phrase": "circle back on",
+        "explanation": "後でまた戻って話す、折り返す。"
+      }
     ]
   },
   {
@@ -51,6 +101,16 @@
     "model_answers": [
       "Just to backtrack a bit, could we go over that number again?",
       "Sorry to go back, but can we double-check that number once more?"
+    ],
+    "expressions": [
+      {
+        "phrase": "backtrack",
+        "explanation": "話を戻す。"
+      },
+      {
+        "phrase": "go over",
+        "explanation": "〜を見直す、確認する。"
+      }
     ]
   },
   {
@@ -60,6 +120,16 @@
     "model_answers": [
       "Given the time, shall we carry this agenda item over to next time?",
       "Since we're running short on time, could we push this item to the next meeting?"
+    ],
+    "expressions": [
+      {
+        "phrase": "carry over",
+        "explanation": "議題などを持ち越す。"
+      },
+      {
+        "phrase": "running short on time",
+        "explanation": "時間が足りなくなってきている。"
+      }
     ]
   },
   {
@@ -68,7 +138,17 @@
     "jp_text": "この場で決めるのではなく、オフラインで詰めましょう。",
     "model_answers": [
       "Instead of deciding this here, let's hash it out offline.",
-      "Let's not settle this in the meeting — we can work out the details offline."
+      "Let's not settle this in the meeting. We can work out the details offline."
+    ],
+    "expressions": [
+      {
+        "phrase": "hash out",
+        "explanation": "細部まで議論して詰める。"
+      },
+      {
+        "phrase": "offline",
+        "explanation": "会議の場の外で。"
+      }
     ]
   },
   {
@@ -77,6 +157,16 @@
     "jp_text": "皆さんのご意見を伺う前に、私から簡単に背景を共有させてください。",
     "model_answers": [
       "Before I hear everyone's thoughts, let me quickly share some background."
+    ],
+    "expressions": [
+      {
+        "phrase": "share some background",
+        "explanation": "背景を共有する。"
+      },
+      {
+        "phrase": "Before I hear everyone's thoughts",
+        "explanation": "皆さんの意見を聞く前に。"
+      }
     ]
   },
   {
@@ -85,6 +175,16 @@
     "jp_text": "それでは、ここまでの内容を簡単にまとめさせてください。",
     "model_answers": [
       "Let me quickly summarize what we've covered so far."
+    ],
+    "expressions": [
+      {
+        "phrase": "summarize",
+        "explanation": "要約する。"
+      },
+      {
+        "phrase": "so far",
+        "explanation": "ここまで。"
+      }
     ]
   },
   {
@@ -92,7 +192,17 @@
     "category": "mtg_speech",
     "jp_text": "すみません、通信が不安定なので、もう一度お願いできますか。",
     "model_answers": [
-      "Sorry, my connection is unstable — could you say that again?"
+      "Sorry, my connection is unstable, so could you say that again?"
+    ],
+    "expressions": [
+      {
+        "phrase": "unstable connection",
+        "explanation": "不安定な接続。"
+      },
+      {
+        "phrase": "say that again",
+        "explanation": "もう一度言う。"
+      }
     ]
   },
   {
@@ -101,7 +211,17 @@
     "jp_text": "私も同じ意見です。付け加えることは特にありません。",
     "model_answers": [
       "I share the same view. I don't have much to add.",
-      "I'm on the same page — nothing further to add from me."
+      "I'm on the same page, so nothing further to add from me."
+    ],
+    "expressions": [
+      {
+        "phrase": "I'm on the same page",
+        "explanation": "同じ認識です。"
+      },
+      {
+        "phrase": "nothing further to add",
+        "explanation": "これ以上付け加えることはない。"
+      }
     ]
   },
   {
@@ -110,6 +230,16 @@
     "jp_text": "この投資に反対する理由は3つあります。1つ目は資金回収期間の長さです。",
     "model_answers": [
       "There are three reasons I'm against this investment. The first is the length of the payback period."
+    ],
+    "expressions": [
+      {
+        "phrase": "payback period",
+        "explanation": "投資回収期間。"
+      },
+      {
+        "phrase": "The first is ...",
+        "explanation": "1つ目は〜です。列挙の型。"
+      }
     ]
   },
   {
@@ -118,6 +248,16 @@
     "jp_text": "まず全体像を説明してから、詳細に入らせてください。",
     "model_answers": [
       "Let me first walk through the big picture before getting into the details."
+    ],
+    "expressions": [
+      {
+        "phrase": "walk through",
+        "explanation": "順を追って説明する。"
+      },
+      {
+        "phrase": "the big picture",
+        "explanation": "全体像。"
+      }
     ]
   },
   {
@@ -127,6 +267,16 @@
     "model_answers": [
       "To cut to the chase, we shouldn't move forward with this urban development plan.",
       "Bottom line, we should not proceed with this urban development plan."
+    ],
+    "expressions": [
+      {
+        "phrase": "cut to the chase",
+        "explanation": "単刀直入に言う。"
+      },
+      {
+        "phrase": "bottom line",
+        "explanation": "結論を言えば。"
+      }
     ]
   },
   {
@@ -135,6 +285,16 @@
     "jp_text": "この論点は大きく2つの軸で整理できます。",
     "model_answers": [
       "This issue can be broken down into two main dimensions."
+    ],
+    "expressions": [
+      {
+        "phrase": "break down into",
+        "explanation": "〜に分解して整理する。"
+      },
+      {
+        "phrase": "dimension",
+        "explanation": "軸、側面。"
+      }
     ]
   },
   {
@@ -143,6 +303,16 @@
     "jp_text": "最後に、次のステップについて確認させてください。",
     "model_answers": [
       "Finally, let's confirm the next steps."
+    ],
+    "expressions": [
+      {
+        "phrase": "next steps",
+        "explanation": "次のステップ。"
+      },
+      {
+        "phrase": "confirm",
+        "explanation": "確認する。"
+      }
     ]
   },
   {
@@ -151,6 +321,16 @@
     "jp_text": "論点を整理すると、コストと品質のトレードオフが焦点になります。",
     "model_answers": [
       "To organize the points, the core issue is the trade-off between cost and quality."
+    ],
+    "expressions": [
+      {
+        "phrase": "trade-off",
+        "explanation": "トレードオフ。"
+      },
+      {
+        "phrase": "core issue",
+        "explanation": "核心的な論点。"
+      }
     ]
   },
   {
@@ -159,6 +339,16 @@
     "jp_text": "この議論には前提が2つあります。まず市場が成長し続けるという前提です。",
     "model_answers": [
       "There are two assumptions underlying this discussion. First, that the market keeps growing."
+    ],
+    "expressions": [
+      {
+        "phrase": "assumption",
+        "explanation": "前提。"
+      },
+      {
+        "phrase": "underlying",
+        "explanation": "根底にある。"
+      }
     ]
   },
   {
@@ -167,6 +357,16 @@
     "jp_text": "一旦ここまでの論点をまとめてから、次の議題に移りましょう。",
     "model_answers": [
       "Let's summarize the points so far before moving to the next topic."
+    ],
+    "expressions": [
+      {
+        "phrase": "summarize the points",
+        "explanation": "論点をまとめる。"
+      },
+      {
+        "phrase": "move on to",
+        "explanation": "次へ進む。"
+      }
     ]
   },
   {
@@ -175,6 +375,16 @@
     "jp_text": "賛成派・反対派、両方の意見を整理してから判断しましょう。",
     "model_answers": [
       "Let's lay out both the arguments for and against before we decide."
+    ],
+    "expressions": [
+      {
+        "phrase": "lay out",
+        "explanation": "整理して示す。"
+      },
+      {
+        "phrase": "for and against",
+        "explanation": "賛成と反対。"
+      }
     ]
   },
   {
@@ -183,6 +393,16 @@
     "jp_text": "この提案の強みと弱みを、それぞれ簡潔に説明します。",
     "model_answers": [
       "Let me briefly walk through the strengths and weaknesses of this proposal."
+    ],
+    "expressions": [
+      {
+        "phrase": "strengths and weaknesses",
+        "explanation": "強みと弱み。"
+      },
+      {
+        "phrase": "briefly",
+        "explanation": "手短に。"
+      }
     ]
   },
   {
@@ -191,6 +411,16 @@
     "jp_text": "話が少しそれましたので、本題に戻りましょう。",
     "model_answers": [
       "We've gotten a bit off track, so let's get back to the main point."
+    ],
+    "expressions": [
+      {
+        "phrase": "off track",
+        "explanation": "脱線して。"
+      },
+      {
+        "phrase": "get back to",
+        "explanation": "〜に戻る。"
+      }
     ]
   },
   {
@@ -199,6 +429,16 @@
     "jp_text": "優先順位をつけるなら、コスト削減が最初に来るべきです。",
     "model_answers": [
       "If we're prioritizing, cost reduction should come first."
+    ],
+    "expressions": [
+      {
+        "phrase": "prioritize",
+        "explanation": "優先順位をつける。"
+      },
+      {
+        "phrase": "come first",
+        "explanation": "最優先になる。"
+      }
     ]
   },
   {
@@ -207,6 +447,16 @@
     "jp_text": "この数字が示すのは、若年層の離脱率が想定より高いということです。",
     "model_answers": [
       "What this number shows is that the churn rate among younger users is higher than expected."
+    ],
+    "expressions": [
+      {
+        "phrase": "churn rate",
+        "explanation": "解約率、離脱率。"
+      },
+      {
+        "phrase": "higher than expected",
+        "explanation": "想定より高い。"
+      }
     ]
   },
   {
@@ -215,6 +465,16 @@
     "jp_text": "このデータによれば、都市部での再エネ需要は今後3年で倍増する見込みです。",
     "model_answers": [
       "According to this data, demand for renewable energy in urban areas is expected to double over the next three years."
+    ],
+    "expressions": [
+      {
+        "phrase": "According to",
+        "explanation": "〜によれば。"
+      },
+      {
+        "phrase": "double",
+        "explanation": "倍増する。"
+      }
     ]
   },
   {
@@ -223,6 +483,16 @@
     "jp_text": "サンプルサイズが小さいため、この結果は参考程度に捉えるべきです。",
     "model_answers": [
       "Given the small sample size, we should treat this result as merely indicative."
+    ],
+    "expressions": [
+      {
+        "phrase": "sample size",
+        "explanation": "サンプルサイズ。"
+      },
+      {
+        "phrase": "indicative",
+        "explanation": "傾向を示す程度の、参考程度の。"
+      }
     ]
   },
   {
@@ -231,6 +501,16 @@
     "jp_text": "この相関関係だけでは、因果関係があるとは言えません。",
     "model_answers": [
       "This correlation alone doesn't prove causation."
+    ],
+    "expressions": [
+      {
+        "phrase": "correlation",
+        "explanation": "相関。"
+      },
+      {
+        "phrase": "causation",
+        "explanation": "因果関係。"
+      }
     ]
   },
   {
@@ -239,6 +519,16 @@
     "jp_text": "エビデンスに基づくと、価格よりもブランドへの信頼が購買の決め手になっています。",
     "model_answers": [
       "Based on the evidence, brand trust is a bigger purchase driver than price."
+    ],
+    "expressions": [
+      {
+        "phrase": "Based on the evidence",
+        "explanation": "根拠に基づくと。"
+      },
+      {
+        "phrase": "purchase driver",
+        "explanation": "購買の決め手。"
+      }
     ]
   },
   {
@@ -247,6 +537,16 @@
     "jp_text": "このグラフから、第2四半期に売上が急落したことが読み取れます。",
     "model_answers": [
       "This graph shows that sales dropped sharply in the second quarter."
+    ],
+    "expressions": [
+      {
+        "phrase": "drop sharply",
+        "explanation": "急落する。"
+      },
+      {
+        "phrase": "second quarter",
+        "explanation": "第2四半期。"
+      }
     ]
   },
   {
@@ -255,6 +555,16 @@
     "jp_text": "アンケート結果を見ると、価格よりも使いやすさを重視する顧客が多いです。",
     "model_answers": [
       "The survey results show that most customers value usability over price."
+    ],
+    "expressions": [
+      {
+        "phrase": "survey results",
+        "explanation": "アンケート結果。"
+      },
+      {
+        "phrase": "value A over B",
+        "explanation": "BよりAを重視する。"
+      }
     ]
   },
   {
@@ -263,6 +573,16 @@
     "jp_text": "過去のトレンドを踏まえると、今後も同様のパターンが続くと予測できます。",
     "model_answers": [
       "Based on past trends, we can expect a similar pattern to continue."
+    ],
+    "expressions": [
+      {
+        "phrase": "past trends",
+        "explanation": "過去の傾向。"
+      },
+      {
+        "phrase": "a similar pattern",
+        "explanation": "同様のパターン。"
+      }
     ]
   },
   {
@@ -271,6 +591,16 @@
     "jp_text": "この仮説を裏付けるには、もう少しサンプル数が必要です。",
     "model_answers": [
       "We need a larger sample size to support this hypothesis."
+    ],
+    "expressions": [
+      {
+        "phrase": "support a hypothesis",
+        "explanation": "仮説を裏付ける。"
+      },
+      {
+        "phrase": "larger sample size",
+        "explanation": "より多いサンプル数。"
+      }
     ]
   },
   {
@@ -279,6 +609,16 @@
     "jp_text": "数字だけでなく、定性的なフィードバックも踏まえて判断すべきです。",
     "model_answers": [
       "We should factor in qualitative feedback, not just the numbers."
+    ],
+    "expressions": [
+      {
+        "phrase": "qualitative feedback",
+        "explanation": "定性的なフィードバック。"
+      },
+      {
+        "phrase": "factor in",
+        "explanation": "考慮に入れる。"
+      }
     ]
   },
   {
@@ -287,6 +627,16 @@
     "jp_text": "このベンチマークと比較すると、我々の数値はまだ改善の余地があります。",
     "model_answers": [
       "Compared to this benchmark, there's still room for improvement in our numbers."
+    ],
+    "expressions": [
+      {
+        "phrase": "benchmark",
+        "explanation": "基準、比較対象。"
+      },
+      {
+        "phrase": "room for improvement",
+        "explanation": "改善の余地。"
+      }
     ]
   },
   {
@@ -295,6 +645,16 @@
     "jp_text": "外れ値を除外すると、傾向はもっとはっきり見えてきます。",
     "model_answers": [
       "If we exclude the outliers, the trend becomes much clearer."
+    ],
+    "expressions": [
+      {
+        "phrase": "outlier",
+        "explanation": "外れ値。"
+      },
+      {
+        "phrase": "exclude",
+        "explanation": "除外する。"
+      }
     ]
   },
   {
@@ -303,6 +663,16 @@
     "jp_text": "おっしゃることは理解できますが、別の見方もできると思います。",
     "model_answers": [
       "I understand what you're saying, but I think there's another way to look at it."
+    ],
+    "expressions": [
+      {
+        "phrase": "another way to look at it",
+        "explanation": "別の見方。"
+      },
+      {
+        "phrase": "I understand what you're saying, but",
+        "explanation": "おっしゃることは分かりますが。"
+      }
     ]
   },
   {
@@ -311,6 +681,16 @@
     "jp_text": "その視点も重要ですが、リスク面も考慮すべきではないでしょうか。",
     "model_answers": [
       "That perspective is important, but shouldn't we also consider the risks?"
+    ],
+    "expressions": [
+      {
+        "phrase": "shouldn't we also consider",
+        "explanation": "〜も考慮すべきでは?疑問形で穏やかに主張する。"
+      },
+      {
+        "phrase": "perspective",
+        "explanation": "視点。"
+      }
     ]
   },
   {
@@ -319,6 +699,16 @@
     "jp_text": "反対するわけではありませんが、もう少し時間をかけて検討したいです。",
     "model_answers": [
       "I'm not against it, but I'd like to take a bit more time to think it through."
+    ],
+    "expressions": [
+      {
+        "phrase": "I'm not against it, but",
+        "explanation": "反対ではないが。"
+      },
+      {
+        "phrase": "think it through",
+        "explanation": "よく考え抜く。"
+      }
     ]
   },
   {
@@ -327,6 +717,16 @@
     "jp_text": "厳しいようですが、このままでは目標達成は難しいと思います。",
     "model_answers": [
       "I don't mean to be harsh, but I don't think we'll hit the target as things stand."
+    ],
+    "expressions": [
+      {
+        "phrase": "I don't mean to be harsh",
+        "explanation": "厳しいことを言うつもりはないが。"
+      },
+      {
+        "phrase": "hit the target",
+        "explanation": "目標を達成する。"
+      }
     ]
   },
   {
@@ -335,6 +735,16 @@
     "jp_text": "誤解のないように言うと、計画自体には賛成です。",
     "model_answers": [
       "Just to be clear, I do support the plan itself."
+    ],
+    "expressions": [
+      {
+        "phrase": "Just to be clear",
+        "explanation": "誤解のないように言うと。"
+      },
+      {
+        "phrase": "support",
+        "explanation": "支持する、賛成する。"
+      }
     ]
   },
   {
@@ -343,6 +753,16 @@
     "jp_text": "個人的な意見ですが、そのアプローチは少しリスクが高いように感じます。",
     "model_answers": [
       "This is just my personal take, but that approach feels a bit risky to me."
+    ],
+    "expressions": [
+      {
+        "phrase": "my personal take",
+        "explanation": "私個人の見方。"
+      },
+      {
+        "phrase": "feels a bit risky",
+        "explanation": "少しリスクがあるように感じる。"
+      }
     ]
   },
   {
@@ -351,6 +771,16 @@
     "jp_text": "良い提案だとは思いますが、タイミングとして今は適切でしょうか。",
     "model_answers": [
       "It's a good proposal, but is now really the right timing?"
+    ],
+    "expressions": [
+      {
+        "phrase": "the right timing",
+        "explanation": "適切なタイミング。"
+      },
+      {
+        "phrase": "proposal",
+        "explanation": "提案。"
+      }
     ]
   },
   {
@@ -359,6 +789,16 @@
     "jp_text": "完全に否定するつもりはありませんが、もう少しデータが欲しいところです。",
     "model_answers": [
       "I'm not dismissing it entirely, but I'd like to see a bit more data."
+    ],
+    "expressions": [
+      {
+        "phrase": "dismiss",
+        "explanation": "退ける、一蹴する。"
+      },
+      {
+        "phrase": "a bit more data",
+        "explanation": "もう少しのデータ。"
+      }
     ]
   },
   {
@@ -367,6 +807,16 @@
     "jp_text": "そういう考え方もあるとは思いますが、私は少し違う意見です。",
     "model_answers": [
       "I see where you're coming from, but I have a slightly different view."
+    ],
+    "expressions": [
+      {
+        "phrase": "I see where you're coming from",
+        "explanation": "お考えは分かります。"
+      },
+      {
+        "phrase": "a slightly different view",
+        "explanation": "少し違う見方。"
+      }
     ]
   },
   {
@@ -375,6 +825,16 @@
     "jp_text": "気を悪くしないでほしいのですが、そのやり方だとうまくいかない気がします。",
     "model_answers": [
       "I don't mean any offense, but I don't think that approach will work."
+    ],
+    "expressions": [
+      {
+        "phrase": "I don't mean any offense",
+        "explanation": "悪気はありません。"
+      },
+      {
+        "phrase": "work",
+        "explanation": "うまくいく。"
+      }
     ]
   },
   {
@@ -383,6 +843,16 @@
     "jp_text": "おっしゃる通りの部分もありますが、全面的には賛成しかねます。",
     "model_answers": [
       "You do have a point, but I can't fully agree overall."
+    ],
+    "expressions": [
+      {
+        "phrase": "have a point",
+        "explanation": "もっともな点がある。"
+      },
+      {
+        "phrase": "fully agree",
+        "explanation": "全面的に賛成する。"
+      }
     ]
   },
   {
@@ -391,6 +861,16 @@
     "jp_text": "反論するようで恐縮ですが、その前提には少し無理があると思います。",
     "model_answers": [
       "Sorry to push back, but I think that assumption is a bit of a stretch."
+    ],
+    "expressions": [
+      {
+        "phrase": "push back",
+        "explanation": "反論する。"
+      },
+      {
+        "phrase": "a bit of a stretch",
+        "explanation": "少し無理がある。"
+      }
     ]
   },
   {
@@ -400,6 +880,16 @@
     "model_answers": [
       "What did you get up to over the weekend?",
       "What did you do this past weekend?"
+    ],
+    "expressions": [
+      {
+        "phrase": "get up to",
+        "explanation": "何かをして過ごす。"
+      },
+      {
+        "phrase": "over the weekend",
+        "explanation": "週末の間に。"
+      }
     ]
   },
   {
@@ -408,6 +898,12 @@
     "jp_text": "最近仕事は忙しい?",
     "model_answers": [
       "Have you been busy with work lately?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Have you been busy ... lately?",
+        "explanation": "最近忙しい?近況の定番質問。"
+      }
     ]
   },
   {
@@ -416,6 +912,16 @@
     "jp_text": "このあたりでおすすめのカフェとかある?",
     "model_answers": [
       "Do you know any good cafes around here?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Do you know any good ...?",
+        "explanation": "おすすめの〜を知っていますか。"
+      },
+      {
+        "phrase": "around here",
+        "explanation": "この辺りで。"
+      }
     ]
   },
   {
@@ -424,6 +930,16 @@
     "jp_text": "今日はいつもより寒いね。",
     "model_answers": [
       "It's colder than usual today, isn't it?"
+    ],
+    "expressions": [
+      {
+        "phrase": "than usual",
+        "explanation": "いつもより。"
+      },
+      {
+        "phrase": "..., isn't it?",
+        "explanation": "〜ですよね。付加疑問。"
+      }
     ]
   },
   {
@@ -432,6 +948,16 @@
     "jp_text": "休暇はどこか行く予定はあるの?",
     "model_answers": [
       "Are you planning to go anywhere for the holidays?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Are you planning to",
+        "explanation": "〜する予定ですか。"
+      },
+      {
+        "phrase": "holidays",
+        "explanation": "休暇。"
+      }
     ]
   },
   {
@@ -440,6 +966,16 @@
     "jp_text": "最近何かハマってることある?",
     "model_answers": [
       "Is there anything you've been really into lately?"
+    ],
+    "expressions": [
+      {
+        "phrase": "be into",
+        "explanation": "〜にハマっている。"
+      },
+      {
+        "phrase": "lately",
+        "explanation": "最近。"
+      }
     ]
   },
   {
@@ -447,7 +983,17 @@
     "category": "daily_smalltalk",
     "jp_text": "そのカバン、素敵だね。どこで買ったの?",
     "model_answers": [
-      "That's a nice bag — where did you get it?"
+      "That's a nice bag. Where did you get it?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Where did you get it?",
+        "explanation": "どこで買ったの?"
+      },
+      {
+        "phrase": "a nice bag",
+        "explanation": "素敵なカバン。"
+      }
     ]
   },
   {
@@ -456,6 +1002,16 @@
     "jp_text": "通勤にどれくらい時間かかるの?",
     "model_answers": [
       "How long does your commute take?"
+    ],
+    "expressions": [
+      {
+        "phrase": "commute",
+        "explanation": "通勤。"
+      },
+      {
+        "phrase": "How long does ... take?",
+        "explanation": "〜はどれくらいかかる?"
+      }
     ]
   },
   {
@@ -464,6 +1020,16 @@
     "jp_text": "この辺に住んで長いの?",
     "model_answers": [
       "Have you lived around here for long?"
+    ],
+    "expressions": [
+      {
+        "phrase": "for long",
+        "explanation": "長い間。"
+      },
+      {
+        "phrase": "live around here",
+        "explanation": "この辺に住む。"
+      }
     ]
   },
   {
@@ -472,6 +1038,16 @@
     "jp_text": "最近見た映画で面白かったのある?",
     "model_answers": [
       "Have you seen any good movies recently?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Have you seen any good ...?",
+        "explanation": "面白い〜を見た?"
+      },
+      {
+        "phrase": "recently",
+        "explanation": "最近。"
+      }
     ]
   },
   {
@@ -480,6 +1056,16 @@
     "jp_text": "お子さんは元気にしてる?",
     "model_answers": [
       "How are your kids doing?"
+    ],
+    "expressions": [
+      {
+        "phrase": "How are ... doing?",
+        "explanation": "〜は元気?"
+      },
+      {
+        "phrase": "kids",
+        "explanation": "子どもたち。"
+      }
     ]
   },
   {
@@ -488,6 +1074,16 @@
     "jp_text": "今日は早く帰れそう?",
     "model_answers": [
       "Do you think you'll be able to leave early today?"
+    ],
+    "expressions": [
+      {
+        "phrase": "leave early",
+        "explanation": "早く帰る。"
+      },
+      {
+        "phrase": "be able to",
+        "explanation": "〜できる。"
+      }
     ]
   },
   {
@@ -496,6 +1092,16 @@
     "jp_text": "もしよければ、これ手伝ってもらえないかな。",
     "model_answers": [
       "If you don't mind, could you give me a hand with this?"
+    ],
+    "expressions": [
+      {
+        "phrase": "give me a hand",
+        "explanation": "手を貸す。"
+      },
+      {
+        "phrase": "If you don't mind",
+        "explanation": "差し支えなければ。"
+      }
     ]
   },
   {
@@ -504,6 +1110,16 @@
     "jp_text": "悪いんだけど、後で電話かけ直してもらえる?",
     "model_answers": [
       "Sorry to ask, but could you call me back later?"
+    ],
+    "expressions": [
+      {
+        "phrase": "call me back",
+        "explanation": "折り返し電話する。"
+      },
+      {
+        "phrase": "Sorry to ask, but",
+        "explanation": "頼みにくいのですが。"
+      }
     ]
   },
   {
@@ -511,7 +1127,17 @@
     "category": "daily_requests",
     "jp_text": "ちょっとお願いがあるんだけど、今大丈夫?",
     "model_answers": [
-      "I have a favor to ask — do you have a minute?"
+      "I have a favor to ask. Do you have a minute?"
+    ],
+    "expressions": [
+      {
+        "phrase": "a favor",
+        "explanation": "お願い、頼みごと。"
+      },
+      {
+        "phrase": "Do you have a minute?",
+        "explanation": "少しいいですか。"
+      }
     ]
   },
   {
@@ -520,6 +1146,16 @@
     "jp_text": "空港まで送ってもらうことってできる?",
     "model_answers": [
       "Would you be able to drop me off at the airport?"
+    ],
+    "expressions": [
+      {
+        "phrase": "drop me off",
+        "explanation": "車で送ってくれる。"
+      },
+      {
+        "phrase": "Would you be able to",
+        "explanation": "〜していただけますか。"
+      }
     ]
   },
   {
@@ -528,6 +1164,16 @@
     "jp_text": "この書類、確認してもらえると助かります。",
     "model_answers": [
       "It would help if you could take a look at this document."
+    ],
+    "expressions": [
+      {
+        "phrase": "take a look at",
+        "explanation": "〜を確認する、見る。"
+      },
+      {
+        "phrase": "It would help if",
+        "explanation": "〜してもらえると助かる。"
+      }
     ]
   },
   {
@@ -536,6 +1182,16 @@
     "jp_text": "会議の時間、少し早められますか。",
     "model_answers": [
       "Would it be possible to move the meeting up a bit?"
+    ],
+    "expressions": [
+      {
+        "phrase": "move up",
+        "explanation": "時間を早める。"
+      },
+      {
+        "phrase": "Would it be possible to",
+        "explanation": "〜は可能でしょうか。"
+      }
     ]
   },
   {
@@ -544,6 +1200,16 @@
     "jp_text": "もし手が空いたら、これ見てもらえますか。",
     "model_answers": [
       "Whenever you get a chance, could you take a look at this?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Whenever you get a chance",
+        "explanation": "時間があるときに。"
+      },
+      {
+        "phrase": "take a look",
+        "explanation": "確認する。"
+      }
     ]
   },
   {
@@ -552,6 +1218,16 @@
     "jp_text": "静かにしてもらえますか。集中したいので。",
     "model_answers": [
       "Would you mind keeping it down? I'm trying to concentrate."
+    ],
+    "expressions": [
+      {
+        "phrase": "keep it down",
+        "explanation": "静かにする。"
+      },
+      {
+        "phrase": "Would you mind",
+        "explanation": "〜していただけませんか。"
+      }
     ]
   },
   {
@@ -560,6 +1236,16 @@
     "jp_text": "すみません、道を教えてもらえますか。",
     "model_answers": [
       "Excuse me, could you tell me how to get there?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Excuse me",
+        "explanation": "すみません。呼びかけ。"
+      },
+      {
+        "phrase": "how to get there",
+        "explanation": "そこへの行き方。"
+      }
     ]
   },
   {
@@ -568,6 +1254,16 @@
     "jp_text": "少し窓を開けてもいいですか。",
     "model_answers": [
       "Would it be alright if I opened the window a little?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Would it be alright if I",
+        "explanation": "〜してもよろしいですか。"
+      },
+      {
+        "phrase": "a little",
+        "explanation": "少し。"
+      }
     ]
   },
   {
@@ -576,6 +1272,16 @@
     "jp_text": "来週火曜、休みをもらえますか。",
     "model_answers": [
       "Could I take the day off next Tuesday?"
+    ],
+    "expressions": [
+      {
+        "phrase": "take the day off",
+        "explanation": "休みを取る。"
+      },
+      {
+        "phrase": "Could I",
+        "explanation": "〜してもいいですか。"
+      }
     ]
   },
   {
@@ -584,6 +1290,16 @@
     "jp_text": "これ、代わりにやってもらってもいい?",
     "model_answers": [
       "Would you mind doing this for me instead?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Would you mind -ing",
+        "explanation": "〜していただけませんか。"
+      },
+      {
+        "phrase": "instead",
+        "explanation": "代わりに。"
+      }
     ]
   },
   {
@@ -592,6 +1308,16 @@
     "jp_text": "個人的には、在宅勤務の方が集中できると思う。",
     "model_answers": [
       "Personally, I think I can focus better when working from home."
+    ],
+    "expressions": [
+      {
+        "phrase": "Personally",
+        "explanation": "個人的には。"
+      },
+      {
+        "phrase": "focus better",
+        "explanation": "より集中できる。"
+      }
     ]
   },
   {
@@ -600,6 +1326,12 @@
     "jp_text": "そのレストラン、思ったより良くなかったな。",
     "model_answers": [
       "That restaurant wasn't as good as I expected."
+    ],
+    "expressions": [
+      {
+        "phrase": "wasn't as good as I expected",
+        "explanation": "思ったほど良くなかった。"
+      }
     ]
   },
   {
@@ -608,6 +1340,16 @@
     "jp_text": "正直、その映画はあまり好みじゃなかった。",
     "model_answers": [
       "Honestly, that movie wasn't really my thing."
+    ],
+    "expressions": [
+      {
+        "phrase": "Honestly",
+        "explanation": "正直に言うと。"
+      },
+      {
+        "phrase": "not really my thing",
+        "explanation": "あまり好みではない。"
+      }
     ]
   },
   {
@@ -616,6 +1358,16 @@
     "jp_text": "私はどちらかというと、朝型の方が好き。",
     "model_answers": [
       "I'm more of a morning person, if anything."
+    ],
+    "expressions": [
+      {
+        "phrase": "a morning person",
+        "explanation": "朝型の人。"
+      },
+      {
+        "phrase": "if anything",
+        "explanation": "どちらかと言えば。"
+      }
     ]
   },
   {
@@ -624,6 +1376,16 @@
     "jp_text": "このアプリ、使いやすいと思う?",
     "model_answers": [
       "Do you find this app easy to use?"
+    ],
+    "expressions": [
+      {
+        "phrase": "easy to use",
+        "explanation": "使いやすい。"
+      },
+      {
+        "phrase": "Do you find ...?",
+        "explanation": "〜だと思いますか。"
+      }
     ]
   },
   {
@@ -632,6 +1394,16 @@
     "jp_text": "私だったら、その提案には乗らないかな。",
     "model_answers": [
       "If it were me, I wouldn't go along with that idea."
+    ],
+    "expressions": [
+      {
+        "phrase": "If it were me",
+        "explanation": "私だったら。"
+      },
+      {
+        "phrase": "go along with",
+        "explanation": "〜に賛同する、乗る。"
+      }
     ]
   },
   {
@@ -640,6 +1412,16 @@
     "jp_text": "そのニュース、ちょっと信じがたいよね。",
     "model_answers": [
       "That news is kind of hard to believe, isn't it?"
+    ],
+    "expressions": [
+      {
+        "phrase": "hard to believe",
+        "explanation": "信じがたい。"
+      },
+      {
+        "phrase": "kind of",
+        "explanation": "ちょっと。"
+      }
     ]
   },
   {
@@ -648,6 +1430,16 @@
     "jp_text": "私はコーヒーより紅茶派かな。",
     "model_answers": [
       "I'm more of a tea person than a coffee person."
+    ],
+    "expressions": [
+      {
+        "phrase": "a tea person",
+        "explanation": "紅茶派。"
+      },
+      {
+        "phrase": "more of a ... person than",
+        "explanation": "〜より〜派。"
+      }
     ]
   },
   {
@@ -656,6 +1448,16 @@
     "jp_text": "それについては、賛否両論あると思う。",
     "model_answers": [
       "I think opinions are pretty split on that."
+    ],
+    "expressions": [
+      {
+        "phrase": "opinions are split",
+        "explanation": "意見が分かれる。"
+      },
+      {
+        "phrase": "pretty",
+        "explanation": "かなり。"
+      }
     ]
   },
   {
@@ -664,6 +1466,16 @@
     "jp_text": "この街に住んでみて、思ったより住みやすいと感じた。",
     "model_answers": [
       "Living in this city, I found it more livable than I expected."
+    ],
+    "expressions": [
+      {
+        "phrase": "livable",
+        "explanation": "住みやすい。"
+      },
+      {
+        "phrase": "more ... than I expected",
+        "explanation": "思ったより〜。"
+      }
     ]
   },
   {
@@ -672,6 +1484,16 @@
     "jp_text": "そのやり方は、ちょっと古いと思わない?",
     "model_answers": [
       "Don't you think that way of doing things is a bit outdated?"
+    ],
+    "expressions": [
+      {
+        "phrase": "outdated",
+        "explanation": "時代遅れの。"
+      },
+      {
+        "phrase": "way of doing things",
+        "explanation": "やり方。"
+      }
     ]
   },
   {
@@ -680,6 +1502,16 @@
     "jp_text": "私は特にこだわりはないから、どっちでもいいよ。",
     "model_answers": [
       "I don't have a strong preference, so either is fine with me."
+    ],
+    "expressions": [
+      {
+        "phrase": "a strong preference",
+        "explanation": "強いこだわり。"
+      },
+      {
+        "phrase": "either is fine",
+        "explanation": "どちらでもよい。"
+      }
     ]
   },
   {
@@ -688,6 +1520,16 @@
     "jp_text": "今度の土曜日、空いてる?",
     "model_answers": [
       "Are you free this coming Saturday?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Are you free ...?",
+        "explanation": "空いてる?"
+      },
+      {
+        "phrase": "this coming Saturday",
+        "explanation": "今度の土曜。"
+      }
     ]
   },
   {
@@ -696,6 +1538,16 @@
     "jp_text": "来週のどこかでランチでもどう?",
     "model_answers": [
       "How about grabbing lunch sometime next week?"
+    ],
+    "expressions": [
+      {
+        "phrase": "grab lunch",
+        "explanation": "ランチをとる。"
+      },
+      {
+        "phrase": "How about ...?",
+        "explanation": "〜はどう?"
+      }
     ]
   },
   {
@@ -703,7 +1555,17 @@
     "category": "daily_plans",
     "jp_text": "予定が変わったから、来週に延期してもいい?",
     "model_answers": [
-      "My plans changed — could we push it to next week?"
+      "My plans changed, so could we push it to next week?"
+    ],
+    "expressions": [
+      {
+        "phrase": "push to",
+        "explanation": "〜に延期する。"
+      },
+      {
+        "phrase": "My plans changed",
+        "explanation": "予定が変わった。"
+      }
     ]
   },
   {
@@ -712,6 +1574,16 @@
     "jp_text": "その日は先約があるから、別の日にしてもらえる?",
     "model_answers": [
       "I already have plans that day, so could we pick another day?"
+    ],
+    "expressions": [
+      {
+        "phrase": "already have plans",
+        "explanation": "先約がある。"
+      },
+      {
+        "phrase": "pick another day",
+        "explanation": "別の日にする。"
+      }
     ]
   },
   {
@@ -720,6 +1592,16 @@
     "jp_text": "何時に集合する?",
     "model_answers": [
       "What time should we meet up?"
+    ],
+    "expressions": [
+      {
+        "phrase": "meet up",
+        "explanation": "集合する。"
+      },
+      {
+        "phrase": "What time should we",
+        "explanation": "何時に〜しようか。"
+      }
     ]
   },
   {
@@ -728,6 +1610,16 @@
     "jp_text": "天気が悪そうだから、予定を変えた方がいいかも。",
     "model_answers": [
       "The weather doesn't look great, so maybe we should change our plans."
+    ],
+    "expressions": [
+      {
+        "phrase": "doesn't look great",
+        "explanation": "よくなさそう。"
+      },
+      {
+        "phrase": "change our plans",
+        "explanation": "予定を変える。"
+      }
     ]
   },
   {
@@ -736,6 +1628,16 @@
     "jp_text": "直前になって申し訳ないけど、キャンセルしてもいい?",
     "model_answers": [
       "I'm sorry for the short notice, but could I cancel?"
+    ],
+    "expressions": [
+      {
+        "phrase": "short notice",
+        "explanation": "直前の連絡。"
+      },
+      {
+        "phrase": "cancel",
+        "explanation": "キャンセルする。"
+      }
     ]
   },
   {
@@ -744,6 +1646,16 @@
     "jp_text": "一応、予備日も決めておこうか。",
     "model_answers": [
       "Should we go ahead and set a backup date, just in case?"
+    ],
+    "expressions": [
+      {
+        "phrase": "backup date",
+        "explanation": "予備日。"
+      },
+      {
+        "phrase": "just in case",
+        "explanation": "念のため。"
+      }
     ]
   },
   {
@@ -752,6 +1664,16 @@
     "jp_text": "そろそろ日程を決めないといけないね。",
     "model_answers": [
       "We should probably lock in a date soon."
+    ],
+    "expressions": [
+      {
+        "phrase": "lock in",
+        "explanation": "確定させる。"
+      },
+      {
+        "phrase": "probably",
+        "explanation": "おそらく。"
+      }
     ]
   },
   {
@@ -760,6 +1682,16 @@
     "jp_text": "来月あたり、旅行の計画を立てようと思ってる。",
     "model_answers": [
       "I'm thinking of planning a trip sometime next month."
+    ],
+    "expressions": [
+      {
+        "phrase": "I'm thinking of -ing",
+        "explanation": "〜しようと考えている。"
+      },
+      {
+        "phrase": "sometime next month",
+        "explanation": "来月のどこかで。"
+      }
     ]
   },
   {
@@ -768,6 +1700,16 @@
     "jp_text": "その予定、私は参加できるかまだわからない。",
     "model_answers": [
       "I'm not sure yet if I can make it to that."
+    ],
+    "expressions": [
+      {
+        "phrase": "make it to",
+        "explanation": "会などに参加できる。"
+      },
+      {
+        "phrase": "I'm not sure yet",
+        "explanation": "まだわからない。"
+      }
     ]
   },
   {
@@ -776,6 +1718,2722 @@
     "jp_text": "もし都合が悪くなったら、早めに教えてね。",
     "model_answers": [
       "If it doesn't work out for you, just let me know early."
+    ],
+    "expressions": [
+      {
+        "phrase": "work out",
+        "explanation": "うまくいく。"
+      },
+      {
+        "phrase": "let me know",
+        "explanation": "知らせて。"
+      }
+    ]
+  },
+  {
+    "id": "mtg-13",
+    "category": "mtg_speech",
+    "jp_text": "議事録は私の方で作成して、後ほど共有します。",
+    "model_answers": [
+      "I'll take the minutes and share them afterwards.",
+      "I'll write up the minutes and circulate them later."
+    ],
+    "expressions": [
+      {
+        "phrase": "take the minutes",
+        "explanation": "議事録を取る。会議の定番表現。"
+      },
+      {
+        "phrase": "circulate",
+        "explanation": "資料などを関係者に回覧・共有する。share より少しフォーマルな響き。"
+      }
+    ]
+  },
+  {
+    "id": "structured-13",
+    "category": "structured_discussion",
+    "jp_text": "私の主張は次の通りです。まず課題、次に原因、最後に解決策をお話しします。",
+    "model_answers": [
+      "Here is my argument. I'll cover the problem first, then the cause, and finally the solution."
+    ],
+    "expressions": [
+      {
+        "phrase": "I'll cover X first, then Y",
+        "explanation": "話の構成を最初に示す型。聞き手が追いやすくなる。"
+      },
+      {
+        "phrase": "finally",
+        "explanation": "最後に。順序の締めくくり。"
+      }
+    ]
+  },
+  {
+    "id": "data-13",
+    "category": "data_evidence",
+    "jp_text": "顧客満足度は前年比で5ポイント改善しました。",
+    "model_answers": [
+      "Customer satisfaction improved by five points compared to last year."
+    ],
+    "expressions": [
+      {
+        "phrase": "compared to last year",
+        "explanation": "前年比。year over year や YoY とも言う。"
+      },
+      {
+        "phrase": "improve by",
+        "explanation": "〜ポイント改善する。"
+      }
+    ]
+  },
+  {
+    "id": "rebuttal-13",
+    "category": "rebuttal_softening",
+    "jp_text": "確かにそうなのですが、一つだけ気になる点があります。",
+    "model_answers": [
+      "That's true, but there's one thing that concerns me."
+    ],
+    "expressions": [
+      {
+        "phrase": "That's true, but",
+        "explanation": "確かに〜だが。いったん認めてから反論する型。"
+      },
+      {
+        "phrase": "concern",
+        "explanation": "気がかりな点。"
+      }
+    ]
+  },
+  {
+    "id": "daily-smalltalk-13",
+    "category": "daily_smalltalk",
+    "jp_text": "最近、運動はしてる?",
+    "model_answers": [
+      "Have you been exercising lately?",
+      "Do you work out these days?"
+    ],
+    "expressions": [
+      {
+        "phrase": "work out",
+        "explanation": "運動する、ジムで鍛える。"
+      },
+      {
+        "phrase": "these days",
+        "explanation": "最近は。lately と同様に使える。"
+      }
+    ]
+  },
+  {
+    "id": "daily-requests-13",
+    "category": "daily_requests",
+    "jp_text": "ごめん、もう一度ゆっくり言ってもらえる?",
+    "model_answers": [
+      "Sorry, could you say that again more slowly?"
+    ],
+    "expressions": [
+      {
+        "phrase": "say that again",
+        "explanation": "もう一度言う。"
+      },
+      {
+        "phrase": "more slowly",
+        "explanation": "もっとゆっくり。"
+      }
+    ]
+  },
+  {
+    "id": "daily-opinions-13",
+    "category": "daily_opinions",
+    "jp_text": "リモート会議は便利だけど、雑談が減るのが残念だと思う。",
+    "model_answers": [
+      "Remote meetings are convenient, but it's a shame that we have less casual conversation."
+    ],
+    "expressions": [
+      {
+        "phrase": "it's a shame that",
+        "explanation": "〜なのが残念だ。"
+      },
+      {
+        "phrase": "casual conversation",
+        "explanation": "雑談。"
+      }
+    ]
+  },
+  {
+    "id": "daily-plans-13",
+    "category": "daily_plans",
+    "jp_text": "来週の会議、金曜日の午後に変更できますか。",
+    "model_answers": [
+      "Could we move next week's meeting to Friday afternoon?"
+    ],
+    "expressions": [
+      {
+        "phrase": "move ... to",
+        "explanation": "〜に変更する、動かす。"
+      },
+      {
+        "phrase": "reschedule",
+        "explanation": "日程を変更する。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-01",
+    "category": "business_negotiation",
+    "jp_text": "御社のご希望は理解しましたが、この条件は当社としては難しいです。",
+    "model_answers": [
+      "We understand what you are looking for, but this condition is difficult for us."
+    ],
+    "expressions": [
+      {
+        "phrase": "what you are looking for",
+        "explanation": "ご希望、求めているもの。"
+      },
+      {
+        "phrase": "difficult for us",
+        "explanation": "当社には難しい。直接的な No を避ける言い方。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-01",
+    "category": "business_presentation",
+    "jp_text": "本日は、新サービスの概要についてご説明します。",
+    "model_answers": [
+      "Today I'd like to walk you through an overview of our new service."
+    ],
+    "expressions": [
+      {
+        "phrase": "walk you through",
+        "explanation": "順を追って説明する。"
+      },
+      {
+        "phrase": "overview",
+        "explanation": "概要。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-01",
+    "category": "daily_travel",
+    "jp_text": "すみません、この電車は空港に行きますか。",
+    "model_answers": [
+      "Excuse me, does this train go to the airport?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Does this ... go to",
+        "explanation": "この〜は〜に行きますか。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-01",
+    "category": "daily_dining",
+    "jp_text": "二名です。禁煙席でお願いします。",
+    "model_answers": [
+      "A table for two, non-smoking, please."
+    ],
+    "expressions": [
+      {
+        "phrase": "A table for two",
+        "explanation": "二名席。"
+      },
+      {
+        "phrase": "non-smoking",
+        "explanation": "禁煙の。"
+      }
+    ]
+  },
+  {
+    "id": "mtg-14",
+    "category": "mtg_speech",
+    "jp_text": "念のため確認ですが、今のご質問は価格についてということでよろしいでしょうか。",
+    "model_answers": [
+      "Just to confirm, is your question about pricing?",
+      "Let me make sure I understand. Are you asking about the price?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Just to confirm",
+        "explanation": "念のため確認です。誤解を防ぐ前置きとして頻出。"
+      },
+      {
+        "phrase": "Let me make sure I understand",
+        "explanation": "相手の発言の理解を確かめる丁寧な切り出し。"
+      }
+    ]
+  },
+  {
+    "id": "structured-14",
+    "category": "structured_discussion",
+    "jp_text": "この問題の根本原因は、プロセスではなく人材不足にあると考えます。",
+    "model_answers": [
+      "I believe the root cause of this issue is a shortage of talent, not the process."
+    ],
+    "expressions": [
+      {
+        "phrase": "root cause",
+        "explanation": "根本原因。"
+      },
+      {
+        "phrase": "not the process",
+        "explanation": "「プロセスではなく」と対比して主張を明確にする。"
+      }
+    ]
+  },
+  {
+    "id": "data-14",
+    "category": "data_evidence",
+    "jp_text": "売上の約6割は、上位2社の顧客から来ています。",
+    "model_answers": [
+      "About 60 percent of our revenue comes from our top two customers."
+    ],
+    "expressions": [
+      {
+        "phrase": "come from",
+        "explanation": "〜に由来する。"
+      },
+      {
+        "phrase": "about 60 percent",
+        "explanation": "約6割。割合の言い方。"
+      }
+    ]
+  },
+  {
+    "id": "rebuttal-14",
+    "category": "rebuttal_softening",
+    "jp_text": "もし間違っていたらすみませんが、それは少し違うのではないでしょうか。",
+    "model_answers": [
+      "Correct me if I'm wrong, but I think that might be a bit different.",
+      "Sorry if I'm mistaken, but isn't that slightly off?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Correct me if I'm wrong",
+        "explanation": "間違っていたら指摘してください。婉曲な反論の定番。"
+      },
+      {
+        "phrase": "a bit off",
+        "explanation": "少しずれている。"
+      }
+    ]
+  },
+  {
+    "id": "daily-smalltalk-14",
+    "category": "daily_smalltalk",
+    "jp_text": "昨日の試合、見た?",
+    "model_answers": [
+      "Did you catch the game last night?",
+      "Did you watch the game yesterday?"
+    ],
+    "expressions": [
+      {
+        "phrase": "catch",
+        "explanation": "(番組や試合を)見る。口語では watch より catch がよく使われる。"
+      }
+    ]
+  },
+  {
+    "id": "daily-requests-14",
+    "category": "daily_requests",
+    "jp_text": "ここに座ってもいいですか。",
+    "model_answers": [
+      "Is this seat taken?",
+      "Do you mind if I sit here?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Is this seat taken?",
+        "explanation": "この席は空いていますか。定番表現。"
+      },
+      {
+        "phrase": "Do you mind if I ...?",
+        "explanation": "〜してもいいですか。丁寧な許可の取り方。"
+      }
+    ]
+  },
+  {
+    "id": "daily-opinions-14",
+    "category": "daily_opinions",
+    "jp_text": "どちらかと言えば、都会より地方に住みたいな。",
+    "model_answers": [
+      "If I had to choose, I'd rather live in the countryside than in the city."
+    ],
+    "expressions": [
+      {
+        "phrase": "If I had to choose",
+        "explanation": "どちらか選ぶなら。"
+      },
+      {
+        "phrase": "would rather A than B",
+        "explanation": "BよりAしたい。"
+      }
+    ]
+  },
+  {
+    "id": "daily-plans-14",
+    "category": "daily_plans",
+    "jp_text": "ちょうど手が空いたから、今から会える?",
+    "model_answers": [
+      "I just got free, so can we meet now?"
+    ],
+    "expressions": [
+      {
+        "phrase": "I just got free",
+        "explanation": "今ちょうど空いた。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-02",
+    "category": "business_negotiation",
+    "jp_text": "価格を5パーセント下げていただければ、すぐに発注します。",
+    "model_answers": [
+      "If you can lower the price by five percent, we'll place the order right away."
+    ],
+    "expressions": [
+      {
+        "phrase": "place an order",
+        "explanation": "発注する。"
+      },
+      {
+        "phrase": "If you can ...",
+        "explanation": "〜していただければ。条件提示の型。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-02",
+    "category": "business_presentation",
+    "jp_text": "それでは、スライドの3枚目をご覧ください。",
+    "model_answers": [
+      "Please take a look at slide three.",
+      "Let's turn to slide three."
+    ],
+    "expressions": [
+      {
+        "phrase": "Let's turn to",
+        "explanation": "〜に移りましょう。"
+      },
+      {
+        "phrase": "take a look at",
+        "explanation": "〜をご覧ください。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-02",
+    "category": "daily_travel",
+    "jp_text": "チェックインをお願いします。予約は田中の名前で入っています。",
+    "model_answers": [
+      "I'd like to check in. The reservation is under Tanaka."
+    ],
+    "expressions": [
+      {
+        "phrase": "under (name)",
+        "explanation": "〜名義で。"
+      },
+      {
+        "phrase": "I'd like to",
+        "explanation": "〜したいのですが。丁寧な言い方。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-02",
+    "category": "daily_dining",
+    "jp_text": "おすすめは何ですか。",
+    "model_answers": [
+      "What do you recommend?"
+    ],
+    "expressions": [
+      {
+        "phrase": "What do you recommend?",
+        "explanation": "おすすめは?レストランの定番質問。"
+      }
+    ]
+  },
+  {
+    "id": "mtg-15",
+    "category": "mtg_speech",
+    "jp_text": "その点については、後ほど詳しくご説明します。",
+    "model_answers": [
+      "I'll cover that in more detail later.",
+      "I'll come back to that point shortly."
+    ],
+    "expressions": [
+      {
+        "phrase": "come back to",
+        "explanation": "〜に後で戻る。今は触れず、後で扱うときの定番。"
+      },
+      {
+        "phrase": "in more detail",
+        "explanation": "より詳しく。"
+      }
+    ]
+  },
+  {
+    "id": "structured-15",
+    "category": "structured_discussion",
+    "jp_text": "具体例を挙げると、昨年のA社の事例が参考になります。",
+    "model_answers": [
+      "To give a concrete example, last year's case of Company A is a useful reference."
+    ],
+    "expressions": [
+      {
+        "phrase": "To give a concrete example",
+        "explanation": "具体例を示す前置き。"
+      },
+      {
+        "phrase": "useful reference",
+        "explanation": "参考になる事例。"
+      }
+    ]
+  },
+  {
+    "id": "data-15",
+    "category": "data_evidence",
+    "jp_text": "この数字は季節要因の影響を受けている可能性があります。",
+    "model_answers": [
+      "This figure may be affected by seasonal factors.",
+      "These numbers could be influenced by seasonality."
+    ],
+    "expressions": [
+      {
+        "phrase": "seasonal factors",
+        "explanation": "季節要因。"
+      },
+      {
+        "phrase": "may be affected by",
+        "explanation": "〜の影響を受けている可能性がある。断定を避ける表現。"
+      }
+    ]
+  },
+  {
+    "id": "rebuttal-15",
+    "category": "rebuttal_softening",
+    "jp_text": "その懸念は理解できます。ただ、現時点では影響は限定的だと見ています。",
+    "model_answers": [
+      "I understand your concern. That said, I see the impact as limited at this point."
+    ],
+    "expressions": [
+      {
+        "phrase": "That said",
+        "explanation": "とはいえ。トーンを和らげる接続表現。"
+      },
+      {
+        "phrase": "at this point",
+        "explanation": "現時点では。"
+      }
+    ]
+  },
+  {
+    "id": "daily-smalltalk-15",
+    "category": "daily_smalltalk",
+    "jp_text": "夏休みはどうだった?",
+    "model_answers": [
+      "How was your summer break?",
+      "Did you have a good summer?"
+    ],
+    "expressions": [
+      {
+        "phrase": "How was ...?",
+        "explanation": "〜はどうだった?感想を尋ねる基本形。"
+      }
+    ]
+  },
+  {
+    "id": "daily-requests-15",
+    "category": "daily_requests",
+    "jp_text": "写真を撮っていただけませんか。",
+    "model_answers": [
+      "Could you take a picture of us?",
+      "Would you mind taking our photo?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Would you mind -ing?",
+        "explanation": "〜していただけませんか。丁寧な依頼。"
+      }
+    ]
+  },
+  {
+    "id": "daily-opinions-15",
+    "category": "daily_opinions",
+    "jp_text": "それは言い過ぎだと思う。",
+    "model_answers": [
+      "I think that's going too far.",
+      "That's a bit of an exaggeration, I think."
+    ],
+    "expressions": [
+      {
+        "phrase": "go too far",
+        "explanation": "やり過ぎ、言い過ぎ。"
+      },
+      {
+        "phrase": "exaggeration",
+        "explanation": "誇張。"
+      }
+    ]
+  },
+  {
+    "id": "daily-plans-15",
+    "category": "daily_plans",
+    "jp_text": "30分遅れそうです。先に始めていてください。",
+    "model_answers": [
+      "I'm running thirty minutes late. Please go ahead and start without me."
+    ],
+    "expressions": [
+      {
+        "phrase": "run late",
+        "explanation": "遅れる。"
+      },
+      {
+        "phrase": "start without me",
+        "explanation": "私抜きで始める。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-03",
+    "category": "business_negotiation",
+    "jp_text": "お互いにメリットのある形で合意したいと考えています。",
+    "model_answers": [
+      "We'd like to reach an agreement that works for both sides.",
+      "We want a win-win outcome for both of us."
+    ],
+    "expressions": [
+      {
+        "phrase": "reach an agreement",
+        "explanation": "合意に達する。"
+      },
+      {
+        "phrase": "win-win",
+        "explanation": "双方に利益のある。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-03",
+    "category": "business_presentation",
+    "jp_text": "このグラフが示しているのは、過去5年間の市場規模の推移です。",
+    "model_answers": [
+      "This graph shows how the market size has changed over the past five years."
+    ],
+    "expressions": [
+      {
+        "phrase": "over the past five years",
+        "explanation": "過去5年間にわたり。"
+      },
+      {
+        "phrase": "market size",
+        "explanation": "市場規模。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-03",
+    "category": "daily_travel",
+    "jp_text": "もう少し静かな部屋に変えていただくことはできますか。",
+    "model_answers": [
+      "Would it be possible to change to a quieter room?"
+    ],
+    "expressions": [
+      {
+        "phrase": "quieter",
+        "explanation": "より静かな。"
+      },
+      {
+        "phrase": "Would it be possible to",
+        "explanation": "〜は可能でしょうか。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-03",
+    "category": "daily_dining",
+    "jp_text": "これは何が入っていますか。アレルギーがあるんです。",
+    "model_answers": [
+      "What is in this dish? I have an allergy."
+    ],
+    "expressions": [
+      {
+        "phrase": "have an allergy",
+        "explanation": "アレルギーがある。"
+      },
+      {
+        "phrase": "What is in this?",
+        "explanation": "何が入っていますか。"
+      }
+    ]
+  },
+  {
+    "id": "mtg-16",
+    "category": "mtg_speech",
+    "jp_text": "皆さんの時間を無駄にしないよう、要点だけ手短にお話しします。",
+    "model_answers": [
+      "I'll keep this brief and focus on the key points.",
+      "To respect everyone's time, let me stick to the essentials."
+    ],
+    "expressions": [
+      {
+        "phrase": "keep it brief",
+        "explanation": "手短に話す。"
+      },
+      {
+        "phrase": "stick to the essentials",
+        "explanation": "要点だけに絞る。"
+      }
+    ]
+  },
+  {
+    "id": "structured-16",
+    "category": "structured_discussion",
+    "jp_text": "短期的にはコスト増ですが、長期的には大きなリターンが見込めます。",
+    "model_answers": [
+      "In the short term it raises costs, but in the long term we can expect a significant return."
+    ],
+    "expressions": [
+      {
+        "phrase": "in the short term / in the long term",
+        "explanation": "短期的には/長期的には。時間軸の対比。"
+      },
+      {
+        "phrase": "significant return",
+        "explanation": "大きなリターン。"
+      }
+    ]
+  },
+  {
+    "id": "data-16",
+    "category": "data_evidence",
+    "jp_text": "調査対象は、全国の20代から40代の会社員1,000人です。",
+    "model_answers": [
+      "The survey covered 1,000 office workers in their twenties to forties across the country."
+    ],
+    "expressions": [
+      {
+        "phrase": "in their twenties",
+        "explanation": "20代の。"
+      },
+      {
+        "phrase": "cover",
+        "explanation": "調査などが対象とする。"
+      }
+    ]
+  },
+  {
+    "id": "rebuttal-16",
+    "category": "rebuttal_softening",
+    "jp_text": "私の理解では、それは前回の合意内容とは異なるようです。",
+    "model_answers": [
+      "As I understand it, that seems different from what we agreed last time."
+    ],
+    "expressions": [
+      {
+        "phrase": "As I understand it",
+        "explanation": "私の理解では。断定を避ける。"
+      },
+      {
+        "phrase": "seems different from",
+        "explanation": "〜と異なるようだ。"
+      }
+    ]
+  },
+  {
+    "id": "daily-smalltalk-16",
+    "category": "daily_smalltalk",
+    "jp_text": "今、何か面白いドラマ見てる?",
+    "model_answers": [
+      "Are you watching any good shows right now?"
+    ],
+    "expressions": [
+      {
+        "phrase": "watching any good shows",
+        "explanation": "面白い番組を見ている。show はドラマ全般を指せる。"
+      }
+    ]
+  },
+  {
+    "id": "daily-requests-16",
+    "category": "daily_requests",
+    "jp_text": "領収書をいただけますか。",
+    "model_answers": [
+      "Could I get a receipt, please?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Could I get ...?",
+        "explanation": "〜をいただけますか。購入や注文の定番。"
+      }
+    ]
+  },
+  {
+    "id": "daily-opinions-16",
+    "category": "daily_opinions",
+    "jp_text": "値段のわりには、かなり良い商品だと思う。",
+    "model_answers": [
+      "It's a pretty good product for the price."
+    ],
+    "expressions": [
+      {
+        "phrase": "for the price",
+        "explanation": "値段のわりに。"
+      }
+    ]
+  },
+  {
+    "id": "daily-plans-16",
+    "category": "daily_plans",
+    "jp_text": "その日で大丈夫です。カレンダーに入れておきますね。",
+    "model_answers": [
+      "That day works for me. I'll put it on my calendar."
+    ],
+    "expressions": [
+      {
+        "phrase": "works for me",
+        "explanation": "都合がよい。"
+      },
+      {
+        "phrase": "put it on my calendar",
+        "explanation": "予定に入れる。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-04",
+    "category": "business_negotiation",
+    "jp_text": "納期を2週間延ばしていただくことは可能でしょうか。",
+    "model_answers": [
+      "Would it be possible to extend the delivery date by two weeks?"
+    ],
+    "expressions": [
+      {
+        "phrase": "extend the deadline",
+        "explanation": "期限を延ばす。"
+      },
+      {
+        "phrase": "Would it be possible to",
+        "explanation": "可能でしょうか。依頼の丁寧形。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-04",
+    "category": "business_presentation",
+    "jp_text": "ここで一番強調したいのは、スピードの重要性です。",
+    "model_answers": [
+      "What I want to emphasize most here is the importance of speed."
+    ],
+    "expressions": [
+      {
+        "phrase": "What I want to emphasize is",
+        "explanation": "特に強調したいのは。"
+      },
+      {
+        "phrase": "the importance of",
+        "explanation": "〜の重要性。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-04",
+    "category": "daily_travel",
+    "jp_text": "荷物を午後まで預かってもらえますか。",
+    "model_answers": [
+      "Could you hold my luggage until this afternoon?"
+    ],
+    "expressions": [
+      {
+        "phrase": "hold my luggage",
+        "explanation": "荷物を預かる。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-04",
+    "category": "daily_dining",
+    "jp_text": "注文をお願いします。",
+    "model_answers": [
+      "We're ready to order."
+    ],
+    "expressions": [
+      {
+        "phrase": "be ready to order",
+        "explanation": "注文の準備ができた。"
+      }
+    ]
+  },
+  {
+    "id": "mtg-17",
+    "category": "mtg_speech",
+    "jp_text": "そのアクションは誰が担当しますか。期限はいつにしましょうか。",
+    "model_answers": [
+      "Who will take ownership of that action, and what should the deadline be?",
+      "Who's taking this on, and by when?"
+    ],
+    "expressions": [
+      {
+        "phrase": "take ownership of",
+        "explanation": "〜の責任を持って担当する。owner は会議で頻出。"
+      },
+      {
+        "phrase": "by when",
+        "explanation": "いつまでに。期限確認の短い聞き方。"
+      }
+    ]
+  },
+  {
+    "id": "structured-17",
+    "category": "structured_discussion",
+    "jp_text": "選択肢は3つあります。それぞれのメリットとデメリットを比較しましょう。",
+    "model_answers": [
+      "We have three options. Let's compare the pros and cons of each."
+    ],
+    "expressions": [
+      {
+        "phrase": "pros and cons",
+        "explanation": "メリットとデメリット。"
+      },
+      {
+        "phrase": "option",
+        "explanation": "選択肢。"
+      }
+    ]
+  },
+  {
+    "id": "data-17",
+    "category": "data_evidence",
+    "jp_text": "成長率は鈍化していますが、依然としてプラスを維持しています。",
+    "model_answers": [
+      "Growth is slowing, but it remains positive."
+    ],
+    "expressions": [
+      {
+        "phrase": "slow down",
+        "explanation": "鈍化する。"
+      },
+      {
+        "phrase": "remain positive",
+        "explanation": "プラスを維持する。"
+      }
+    ]
+  },
+  {
+    "id": "rebuttal-17",
+    "category": "rebuttal_softening",
+    "jp_text": "代案として、段階的に導入する方法はいかがでしょうか。",
+    "model_answers": [
+      "As an alternative, how about introducing it in phases?"
+    ],
+    "expressions": [
+      {
+        "phrase": "how about -ing",
+        "explanation": "〜してはどうか。提案の柔らかい形。"
+      },
+      {
+        "phrase": "in phases",
+        "explanation": "段階的に。"
+      }
+    ]
+  },
+  {
+    "id": "daily-smalltalk-17",
+    "category": "daily_smalltalk",
+    "jp_text": "ずいぶん久しぶりだね。元気だった?",
+    "model_answers": [
+      "It's been a long time. How have you been?"
+    ],
+    "expressions": [
+      {
+        "phrase": "How have you been?",
+        "explanation": "久しぶりに会ったときの定番あいさつ。"
+      },
+      {
+        "phrase": "It's been a while",
+        "explanation": "久しぶり。"
+      }
+    ]
+  },
+  {
+    "id": "daily-requests-17",
+    "category": "daily_requests",
+    "jp_text": "これを会議室まで運ぶのを手伝ってくれない?",
+    "model_answers": [
+      "Can you help me carry this to the meeting room?"
+    ],
+    "expressions": [
+      {
+        "phrase": "help me carry",
+        "explanation": "運ぶのを手伝う。help + 人 + 動詞の原形。"
+      }
+    ]
+  },
+  {
+    "id": "daily-opinions-17",
+    "category": "daily_opinions",
+    "jp_text": "毎日は無理だけど、週に数回なら続けられそう。",
+    "model_answers": [
+      "I can't do it every day, but a few times a week seems doable."
+    ],
+    "expressions": [
+      {
+        "phrase": "doable",
+        "explanation": "実行可能な。"
+      },
+      {
+        "phrase": "a few times a week",
+        "explanation": "週に数回。"
+      }
+    ]
+  },
+  {
+    "id": "daily-plans-17",
+    "category": "daily_plans",
+    "jp_text": "都合のいい日をいくつか教えてもらえますか。",
+    "model_answers": [
+      "Could you give me a few dates that work for you?"
+    ],
+    "expressions": [
+      {
+        "phrase": "dates that work for you",
+        "explanation": "あなたの都合のよい日程候補。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-05",
+    "category": "business_negotiation",
+    "jp_text": "その条件であれば、前向きに検討できます。",
+    "model_answers": [
+      "We'd be open to that on those terms.",
+      "If those are the terms, we can consider it positively."
+    ],
+    "expressions": [
+      {
+        "phrase": "be open to",
+        "explanation": "〜に前向き、柔軟である。"
+      },
+      {
+        "phrase": "on those terms",
+        "explanation": "その条件で。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-05",
+    "category": "business_presentation",
+    "jp_text": "細かい点は割愛して、結論を先にお伝えします。",
+    "model_answers": [
+      "I'll skip the details and give you the conclusion first."
+    ],
+    "expressions": [
+      {
+        "phrase": "skip the details",
+        "explanation": "詳細を省く。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-05",
+    "category": "daily_travel",
+    "jp_text": "ここから歩いて行ける距離ですか。",
+    "model_answers": [
+      "Is it within walking distance from here?"
+    ],
+    "expressions": [
+      {
+        "phrase": "within walking distance",
+        "explanation": "歩いて行ける距離。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-05",
+    "category": "daily_dining",
+    "jp_text": "お水をもう一杯いただけますか。",
+    "model_answers": [
+      "Could I have another glass of water?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Could I have another",
+        "explanation": "もう一つ、もう一杯いただけますか。"
+      }
+    ]
+  },
+  {
+    "id": "mtg-18",
+    "category": "mtg_speech",
+    "jp_text": "いったん持ち帰って、チームで相談してからご連絡します。",
+    "model_answers": [
+      "Let me discuss it with my team and get back to you.",
+      "I'll run this by my team and get back to you."
+    ],
+    "expressions": [
+      {
+        "phrase": "get back to you",
+        "explanation": "折り返し連絡する。最頻出の定型句。"
+      },
+      {
+        "phrase": "run it by",
+        "explanation": "〜に相談・確認を取る。"
+      }
+    ]
+  },
+  {
+    "id": "structured-18",
+    "category": "structured_discussion",
+    "jp_text": "要するに、顧客が本当に求めているのは価格ではなく安心感です。",
+    "model_answers": [
+      "In short, what customers really want is peace of mind, not a low price."
+    ],
+    "expressions": [
+      {
+        "phrase": "In short",
+        "explanation": "要するに。まとめの合図。"
+      },
+      {
+        "phrase": "peace of mind",
+        "explanation": "安心感。"
+      }
+    ]
+  },
+  {
+    "id": "data-18",
+    "category": "data_evidence",
+    "jp_text": "この差は統計的に有意とは言えません。",
+    "model_answers": [
+      "This difference is not statistically significant."
+    ],
+    "expressions": [
+      {
+        "phrase": "statistically significant",
+        "explanation": "統計的に有意な。"
+      },
+      {
+        "phrase": "difference",
+        "explanation": "差。"
+      }
+    ]
+  },
+  {
+    "id": "rebuttal-18",
+    "category": "rebuttal_softening",
+    "jp_text": "異論というより、確認したい点が一つあります。",
+    "model_answers": [
+      "I'm not objecting, I just have one thing I'd like to clarify.",
+      "It's less an objection and more a point I'd like to clarify."
+    ],
+    "expressions": [
+      {
+        "phrase": "clarify",
+        "explanation": "明確にする。"
+      },
+      {
+        "phrase": "less A and more B",
+        "explanation": "AというよりB。"
+      }
+    ]
+  },
+  {
+    "id": "daily-smalltalk-18",
+    "category": "daily_smalltalk",
+    "jp_text": "雨が続くと気分が沈むよね。",
+    "model_answers": [
+      "Rainy weather really brings me down, doesn't it?"
+    ],
+    "expressions": [
+      {
+        "phrase": "bring (someone) down",
+        "explanation": "気分を落ち込ませる。"
+      },
+      {
+        "phrase": "..., doesn't it?",
+        "explanation": "付加疑問文。同意を求める雑談の型。"
+      }
+    ]
+  },
+  {
+    "id": "daily-requests-18",
+    "category": "daily_requests",
+    "jp_text": "席を替わっていただいてもよろしいでしょうか。",
+    "model_answers": [
+      "Would you be willing to switch seats with me?",
+      "Would it be possible to swap seats?"
+    ],
+    "expressions": [
+      {
+        "phrase": "switch / swap seats",
+        "explanation": "席を替わる。"
+      },
+      {
+        "phrase": "Would you be willing to ...",
+        "explanation": "〜していただけますか。相手の意思を尊重する丁寧さ。"
+      }
+    ]
+  },
+  {
+    "id": "daily-opinions-18",
+    "category": "daily_opinions",
+    "jp_text": "正直に言うと、あまり興味が持てないんだ。",
+    "model_answers": [
+      "To be honest, I can't get very interested in it.",
+      "Honestly, it doesn't really appeal to me."
+    ],
+    "expressions": [
+      {
+        "phrase": "To be honest",
+        "explanation": "正直に言うと。"
+      },
+      {
+        "phrase": "appeal to",
+        "explanation": "〜に魅力を感じさせる。"
+      }
+    ]
+  },
+  {
+    "id": "daily-plans-18",
+    "category": "daily_plans",
+    "jp_text": "来週は出張でいないので、再来週でもいいですか。",
+    "model_answers": [
+      "I'll be away on a business trip next week, so would the week after next work?"
+    ],
+    "expressions": [
+      {
+        "phrase": "the week after next",
+        "explanation": "再来週。"
+      },
+      {
+        "phrase": "be away on a business trip",
+        "explanation": "出張で不在にする。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-06",
+    "category": "business_negotiation",
+    "jp_text": "まずは小さく始めて、成果を見てから拡大しませんか。",
+    "model_answers": [
+      "Why don't we start small and expand once we see the results?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Why don't we ...?",
+        "explanation": "〜しませんか。提案の表現。"
+      },
+      {
+        "phrase": "start small",
+        "explanation": "小さく始める。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-06",
+    "category": "business_presentation",
+    "jp_text": "ご質問は最後にまとめてお受けします。",
+    "model_answers": [
+      "I'll take questions at the end."
+    ],
+    "expressions": [
+      {
+        "phrase": "take questions",
+        "explanation": "質問を受け付ける。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-06",
+    "category": "daily_travel",
+    "jp_text": "この近くに、薬局はありますか。",
+    "model_answers": [
+      "Is there a pharmacy near here?"
+    ],
+    "expressions": [
+      {
+        "phrase": "pharmacy",
+        "explanation": "薬局。"
+      },
+      {
+        "phrase": "Is there a ... near here?",
+        "explanation": "この近くに〜はありますか。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-06",
+    "category": "daily_dining",
+    "jp_text": "お会計をお願いします。別々でお願いします。",
+    "model_answers": [
+      "Could we have the check, please? Separate checks, please."
+    ],
+    "expressions": [
+      {
+        "phrase": "the check / the bill",
+        "explanation": "お会計。米国は check、英国は bill。"
+      },
+      {
+        "phrase": "separate checks",
+        "explanation": "別会計。"
+      }
+    ]
+  },
+  {
+    "id": "mtg-19",
+    "category": "mtg_speech",
+    "jp_text": "ここまでで、ご質問やご意見はありますか。",
+    "model_answers": [
+      "Does anyone have any questions or comments so far?",
+      "Any thoughts on what we've covered so far?"
+    ],
+    "expressions": [
+      {
+        "phrase": "so far",
+        "explanation": "ここまでのところ。区切りで意見を募る定番。"
+      },
+      {
+        "phrase": "Any thoughts?",
+        "explanation": "ご意見は?と軽く促す短い表現。"
+      }
+    ]
+  },
+  {
+    "id": "structured-19",
+    "category": "structured_discussion",
+    "jp_text": "この施策の成否は、現場をどれだけ巻き込めるかにかかっています。",
+    "model_answers": [
+      "The success of this initiative depends on how well we can get the frontline on board.",
+      "Whether this initiative works depends on how much we involve people on the ground."
+    ],
+    "expressions": [
+      {
+        "phrase": "depend on",
+        "explanation": "〜次第である。"
+      },
+      {
+        "phrase": "get ... on board",
+        "explanation": "〜を巻き込む、賛同させる。"
+      }
+    ]
+  },
+  {
+    "id": "data-19",
+    "category": "data_evidence",
+    "jp_text": "平均値だけでなく、ばらつきも見る必要があります。",
+    "model_answers": [
+      "We need to look at the variation, not just the average."
+    ],
+    "expressions": [
+      {
+        "phrase": "not just A",
+        "explanation": "Aだけでなく。"
+      },
+      {
+        "phrase": "variation",
+        "explanation": "ばらつき。"
+      }
+    ]
+  },
+  {
+    "id": "rebuttal-19",
+    "category": "rebuttal_softening",
+    "jp_text": "その案は魅力的ですが、予算面で現実的ではないかもしれません。",
+    "model_answers": [
+      "That idea is appealing, but it may not be realistic in terms of budget."
+    ],
+    "expressions": [
+      {
+        "phrase": "in terms of",
+        "explanation": "〜の観点では。"
+      },
+      {
+        "phrase": "may not be realistic",
+        "explanation": "現実的ではないかもしれない。"
+      }
+    ]
+  },
+  {
+    "id": "daily-smalltalk-19",
+    "category": "daily_smalltalk",
+    "jp_text": "今週末は何か予定ある?",
+    "model_answers": [
+      "Do you have any plans this weekend?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Do you have any plans?",
+        "explanation": "予定を尋ねる最頻出フレーズ。"
+      }
+    ]
+  },
+  {
+    "id": "daily-requests-19",
+    "category": "daily_requests",
+    "jp_text": "駅までの行き方を、地図で教えてもらえますか。",
+    "model_answers": [
+      "Could you show me on the map how to get to the station?"
+    ],
+    "expressions": [
+      {
+        "phrase": "show me on the map",
+        "explanation": "地図上で示す。"
+      },
+      {
+        "phrase": "how to get to",
+        "explanation": "〜への行き方。"
+      }
+    ]
+  },
+  {
+    "id": "daily-opinions-19",
+    "category": "daily_opinions",
+    "jp_text": "その意見には賛成だな。私も全く同じことを考えていた。",
+    "model_answers": [
+      "I agree with you. I was thinking the exact same thing.",
+      "I couldn't agree more. That's just what I was thinking."
+    ],
+    "expressions": [
+      {
+        "phrase": "the exact same thing",
+        "explanation": "全く同じこと。"
+      },
+      {
+        "phrase": "I couldn't agree more",
+        "explanation": "全く同感です。強い賛成を表す定番。"
+      }
+    ]
+  },
+  {
+    "id": "daily-plans-19",
+    "category": "daily_plans",
+    "jp_text": "駅の改札で待ち合わせしよう。",
+    "model_answers": [
+      "Let's meet at the ticket gate of the station."
+    ],
+    "expressions": [
+      {
+        "phrase": "Let's meet at ...",
+        "explanation": "〜で会おう。待ち合わせの基本形。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-07",
+    "category": "business_negotiation",
+    "jp_text": "これ以上の値引きは、利益が出なくなるので難しいです。",
+    "model_answers": [
+      "We can't offer a bigger discount because we wouldn't make a profit."
+    ],
+    "expressions": [
+      {
+        "phrase": "offer a discount",
+        "explanation": "値引きする。"
+      },
+      {
+        "phrase": "make a profit",
+        "explanation": "利益を出す。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-07",
+    "category": "business_presentation",
+    "jp_text": "この点は、次のスライドで詳しく説明します。",
+    "model_answers": [
+      "I'll explain this point in detail on the next slide."
+    ],
+    "expressions": [
+      {
+        "phrase": "in detail",
+        "explanation": "詳しく。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-07",
+    "category": "daily_travel",
+    "jp_text": "パスポートをなくしてしまったようです。どうすればいいですか。",
+    "model_answers": [
+      "I think I lost my passport. What should I do?"
+    ],
+    "expressions": [
+      {
+        "phrase": "What should I do?",
+        "explanation": "どうすればいいですか。困ったときの万能質問。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-07",
+    "category": "daily_dining",
+    "jp_text": "辛さは控えめにしてもらえますか。",
+    "model_answers": [
+      "Could you make it less spicy?"
+    ],
+    "expressions": [
+      {
+        "phrase": "make it less spicy",
+        "explanation": "辛さを控えめにする。"
+      }
+    ]
+  },
+  {
+    "id": "mtg-20",
+    "category": "mtg_speech",
+    "jp_text": "画面が共有できていないようなので、少し待っていただけますか。",
+    "model_answers": [
+      "It looks like my screen isn't sharing yet, so could you give me a moment?",
+      "Bear with me, I'm having trouble sharing my screen."
+    ],
+    "expressions": [
+      {
+        "phrase": "bear with me",
+        "explanation": "少々お待ちください。トラブル時の定番。"
+      },
+      {
+        "phrase": "give me a moment",
+        "explanation": "少し時間をください。"
+      }
+    ]
+  },
+  {
+    "id": "structured-20",
+    "category": "structured_discussion",
+    "jp_text": "そのリスクは、事前の対策でかなり軽減できると思います。",
+    "model_answers": [
+      "I think we can significantly reduce that risk with advance preparation.",
+      "That risk can be largely mitigated if we prepare in advance."
+    ],
+    "expressions": [
+      {
+        "phrase": "mitigate",
+        "explanation": "リスクなどを軽減する。ビジネスで頻出。"
+      },
+      {
+        "phrase": "in advance",
+        "explanation": "事前に。"
+      }
+    ]
+  },
+  {
+    "id": "data-20",
+    "category": "data_evidence",
+    "jp_text": "仮に需要が10パーセント減ったとしても、黒字は維持できます。",
+    "model_answers": [
+      "Even if demand dropped by 10 percent, we would still stay in the black.",
+      "Even if demand fell 10 percent, we'd remain profitable."
+    ],
+    "expressions": [
+      {
+        "phrase": "stay in the black",
+        "explanation": "黒字を維持する。反対は in the red。"
+      },
+      {
+        "phrase": "Even if",
+        "explanation": "たとえ〜でも。仮定の強調。"
+      }
+    ]
+  },
+  {
+    "id": "rebuttal-20",
+    "category": "rebuttal_softening",
+    "jp_text": "私も最初はそう思っていたのですが、データを見て考えが変わりました。",
+    "model_answers": [
+      "I thought so too at first, but the data changed my mind."
+    ],
+    "expressions": [
+      {
+        "phrase": "change my mind",
+        "explanation": "考えを変える。"
+      },
+      {
+        "phrase": "at first",
+        "explanation": "最初は。"
+      }
+    ]
+  },
+  {
+    "id": "daily-smalltalk-20",
+    "category": "daily_smalltalk",
+    "jp_text": "どこの出身なの?",
+    "model_answers": [
+      "Where are you from?",
+      "Which part of the country are you from?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Which part of ... are you from?",
+        "explanation": "出身地をさらに詳しく聞く言い方。"
+      }
+    ]
+  },
+  {
+    "id": "daily-requests-20",
+    "category": "daily_requests",
+    "jp_text": "ちょっと急いでいるので、先にやってもらえると助かります。",
+    "model_answers": [
+      "I'm in a bit of a hurry, so it would be great if you could do it first."
+    ],
+    "expressions": [
+      {
+        "phrase": "I'm in a hurry",
+        "explanation": "急いでいる。"
+      },
+      {
+        "phrase": "it would be great if you could",
+        "explanation": "〜してもらえると助かる。依頼の万能フレーズ。"
+      }
+    ]
+  },
+  {
+    "id": "daily-opinions-20",
+    "category": "daily_opinions",
+    "jp_text": "AIの進歩には、良い面も悪い面もあると思う。",
+    "model_answers": [
+      "I think the progress of AI has both good and bad sides.",
+      "AI has its pros and cons."
+    ],
+    "expressions": [
+      {
+        "phrase": "both good and bad sides",
+        "explanation": "良い面も悪い面も。"
+      },
+      {
+        "phrase": "pros and cons",
+        "explanation": "利点と欠点。"
+      }
+    ]
+  },
+  {
+    "id": "daily-plans-20",
+    "category": "daily_plans",
+    "jp_text": "予定が詰まっていて、その日は難しそうです。",
+    "model_answers": [
+      "My schedule is packed, so that day looks difficult."
+    ],
+    "expressions": [
+      {
+        "phrase": "packed",
+        "explanation": "予定がいっぱいの。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-08",
+    "category": "business_negotiation",
+    "jp_text": "契約期間を1年から2年に延ばす代わりに、単価を下げていただけますか。",
+    "model_answers": [
+      "In exchange for extending the contract from one to two years, could you lower the unit price?"
+    ],
+    "expressions": [
+      {
+        "phrase": "in exchange for",
+        "explanation": "〜と引き換えに。交渉で頻出。"
+      },
+      {
+        "phrase": "unit price",
+        "explanation": "単価。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-08",
+    "category": "business_presentation",
+    "jp_text": "以上が、現状の課題です。",
+    "model_answers": [
+      "That covers the current challenges."
+    ],
+    "expressions": [
+      {
+        "phrase": "That covers",
+        "explanation": "〜については以上です。区切りの合図。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-08",
+    "category": "daily_travel",
+    "jp_text": "乗り換えはどこでしますか。",
+    "model_answers": [
+      "Where do I change trains?"
+    ],
+    "expressions": [
+      {
+        "phrase": "change trains",
+        "explanation": "乗り換える。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-08",
+    "category": "daily_dining",
+    "jp_text": "これをテイクアウトにできますか。",
+    "model_answers": [
+      "Can I get this to go?"
+    ],
+    "expressions": [
+      {
+        "phrase": "to go",
+        "explanation": "持ち帰りで。"
+      }
+    ]
+  },
+  {
+    "id": "mtg-21",
+    "category": "mtg_speech",
+    "jp_text": "この議題の目的は、意思決定ではなく情報共有です。",
+    "model_answers": [
+      "The purpose of this agenda item is to share information, not to make a decision.",
+      "This item is about sharing information rather than making a decision."
+    ],
+    "expressions": [
+      {
+        "phrase": "rather than",
+        "explanation": "〜ではなく。対比の基本表現。"
+      },
+      {
+        "phrase": "agenda item",
+        "explanation": "議題。"
+      }
+    ]
+  },
+  {
+    "id": "structured-21",
+    "category": "structured_discussion",
+    "jp_text": "議論を深める前に、用語の定義をそろえておきましょう。",
+    "model_answers": [
+      "Before we go deeper, let's align on the definitions."
+    ],
+    "expressions": [
+      {
+        "phrase": "align on",
+        "explanation": "〜について認識をそろえる。"
+      },
+      {
+        "phrase": "go deeper",
+        "explanation": "より深く議論する。"
+      }
+    ]
+  },
+  {
+    "id": "data-21",
+    "category": "data_evidence",
+    "jp_text": "競合と比べると、当社の解約率は半分程度です。",
+    "model_answers": [
+      "Compared with our competitors, our churn rate is about half."
+    ],
+    "expressions": [
+      {
+        "phrase": "churn rate",
+        "explanation": "解約率。"
+      },
+      {
+        "phrase": "compared with",
+        "explanation": "〜と比べると。"
+      }
+    ]
+  },
+  {
+    "id": "rebuttal-21",
+    "category": "rebuttal_softening",
+    "jp_text": "もう少し慎重に進めた方がよいというのが私の率直な印象です。",
+    "model_answers": [
+      "My honest impression is that we should proceed a little more carefully."
+    ],
+    "expressions": [
+      {
+        "phrase": "proceed carefully",
+        "explanation": "慎重に進める。"
+      },
+      {
+        "phrase": "honest impression",
+        "explanation": "率直な印象。"
+      }
+    ]
+  },
+  {
+    "id": "daily-smalltalk-21",
+    "category": "daily_smalltalk",
+    "jp_text": "最近、新しい趣味を始めたんだ。",
+    "model_answers": [
+      "I've recently taken up a new hobby.",
+      "I started a new hobby recently."
+    ],
+    "expressions": [
+      {
+        "phrase": "take up",
+        "explanation": "趣味などを始める。"
+      }
+    ]
+  },
+  {
+    "id": "daily-requests-21",
+    "category": "daily_requests",
+    "jp_text": "よければ、メモを取らせてもらってもいいですか。",
+    "model_answers": [
+      "Would it be okay if I took notes?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Would it be okay if I ...?",
+        "explanation": "〜してもよいですか。過去形にすると丁寧になる。"
+      }
+    ]
+  },
+  {
+    "id": "daily-opinions-21",
+    "category": "daily_opinions",
+    "jp_text": "最初は不安だったけど、やってみたら意外と楽しかった。",
+    "model_answers": [
+      "I was nervous at first, but it turned out to be more fun than I expected."
+    ],
+    "expressions": [
+      {
+        "phrase": "turn out to be",
+        "explanation": "結局〜だとわかる。"
+      },
+      {
+        "phrase": "more ... than I expected",
+        "explanation": "思ったより〜。"
+      }
+    ]
+  },
+  {
+    "id": "daily-plans-21",
+    "category": "daily_plans",
+    "jp_text": "急用ができたので、今日は欠席させてください。",
+    "model_answers": [
+      "Something urgent came up, so I'll have to miss it today."
+    ],
+    "expressions": [
+      {
+        "phrase": "something came up",
+        "explanation": "急用ができた。断りの定番。"
+      },
+      {
+        "phrase": "miss",
+        "explanation": "予定などを欠席する。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-09",
+    "category": "business_negotiation",
+    "jp_text": "お互いの優先事項を整理するところから始めましょう。",
+    "model_answers": [
+      "Let's start by clarifying each side's priorities."
+    ],
+    "expressions": [
+      {
+        "phrase": "priorities",
+        "explanation": "優先事項。"
+      },
+      {
+        "phrase": "Let's start by -ing",
+        "explanation": "まず〜することから始めよう。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-09",
+    "category": "business_presentation",
+    "jp_text": "弊社の強みは、現場に根ざしたサポート体制にあります。",
+    "model_answers": [
+      "Our strength lies in our support system rooted in the field."
+    ],
+    "expressions": [
+      {
+        "phrase": "lie in",
+        "explanation": "〜にある。"
+      },
+      {
+        "phrase": "rooted in",
+        "explanation": "〜に根ざした。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-09",
+    "category": "daily_travel",
+    "jp_text": "予約を明日の夜に変更したいのですが。",
+    "model_answers": [
+      "I'd like to change my reservation to tomorrow night."
+    ],
+    "expressions": [
+      {
+        "phrase": "change my reservation",
+        "explanation": "予約を変更する。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-09",
+    "category": "daily_dining",
+    "jp_text": "予約していませんが、席は空いていますか。",
+    "model_answers": [
+      "We don't have a reservation. Do you have any tables available?"
+    ],
+    "expressions": [
+      {
+        "phrase": "have a reservation",
+        "explanation": "予約している。"
+      },
+      {
+        "phrase": "tables available",
+        "explanation": "空いている席。"
+      }
+    ]
+  },
+  {
+    "id": "mtg-22",
+    "category": "mtg_speech",
+    "jp_text": "今日の決定事項を整理して、本日中にメールでお送りします。",
+    "model_answers": [
+      "I'll summarize today's decisions and send them by email before the end of the day.",
+      "I'll send out a summary of today's decisions and action items by the end of the day."
+    ],
+    "expressions": [
+      {
+        "phrase": "by the end of the day",
+        "explanation": "本日中に。EOD と略されることも多い。"
+      },
+      {
+        "phrase": "decisions and action items",
+        "explanation": "決定事項と宿題。議事録で定番のペア。"
+      }
+    ]
+  },
+  {
+    "id": "structured-22",
+    "category": "structured_discussion",
+    "jp_text": "以上を踏まえて、私からの提案は2点です。",
+    "model_answers": [
+      "Based on all of this, I have two recommendations."
+    ],
+    "expressions": [
+      {
+        "phrase": "Based on all of this",
+        "explanation": "これを踏まえて。結論への橋渡し。"
+      },
+      {
+        "phrase": "recommendation",
+        "explanation": "提言。proposal より専門的な響き。"
+      }
+    ]
+  },
+  {
+    "id": "data-22",
+    "category": "data_evidence",
+    "jp_text": "データを見る限り、この施策は期待したほどの効果が出ていません。",
+    "model_answers": [
+      "Judging from the data, this initiative hasn't delivered the results we expected."
+    ],
+    "expressions": [
+      {
+        "phrase": "judging from",
+        "explanation": "〜から判断すると。"
+      },
+      {
+        "phrase": "deliver results",
+        "explanation": "成果を出す。"
+      }
+    ]
+  },
+  {
+    "id": "rebuttal-22",
+    "category": "rebuttal_softening",
+    "jp_text": "そこは意見が分かれるところですが、折衷案を探ってみませんか。",
+    "model_answers": [
+      "That's where opinions differ, but shall we look for a middle ground?"
+    ],
+    "expressions": [
+      {
+        "phrase": "middle ground",
+        "explanation": "折衷案、妥協点。"
+      },
+      {
+        "phrase": "opinions differ",
+        "explanation": "意見が分かれる。"
+      }
+    ]
+  },
+  {
+    "id": "daily-smalltalk-22",
+    "category": "daily_smalltalk",
+    "jp_text": "お昼はもう食べた?",
+    "model_answers": [
+      "Have you had lunch yet?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Have you ... yet?",
+        "explanation": "もう〜した?現在完了の疑問文。"
+      }
+    ]
+  },
+  {
+    "id": "daily-requests-22",
+    "category": "daily_requests",
+    "jp_text": "この荷物、少しの間見ていてもらえますか。",
+    "model_answers": [
+      "Could you keep an eye on my bag for a minute?"
+    ],
+    "expressions": [
+      {
+        "phrase": "keep an eye on",
+        "explanation": "〜を見張る、気にかけておく。"
+      }
+    ]
+  },
+  {
+    "id": "daily-opinions-22",
+    "category": "daily_opinions",
+    "jp_text": "どちらが正しいかは、状況によると思う。",
+    "model_answers": [
+      "I think which one is right depends on the situation.",
+      "It depends on the situation."
+    ],
+    "expressions": [
+      {
+        "phrase": "It depends",
+        "explanation": "場合による。意見を断定しない万能表現。"
+      }
+    ]
+  },
+  {
+    "id": "daily-plans-22",
+    "category": "daily_plans",
+    "jp_text": "決まったら、すぐに共有するね。",
+    "model_answers": [
+      "I'll let you know as soon as it's decided."
+    ],
+    "expressions": [
+      {
+        "phrase": "as soon as",
+        "explanation": "〜したらすぐに。"
+      },
+      {
+        "phrase": "let you know",
+        "explanation": "知らせる。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-10",
+    "category": "business_negotiation",
+    "jp_text": "最終的な判断は、上司と相談した上でお返事します。",
+    "model_answers": [
+      "I'll give you our final answer after consulting with my manager."
+    ],
+    "expressions": [
+      {
+        "phrase": "after consulting with",
+        "explanation": "〜と相談した上で。"
+      },
+      {
+        "phrase": "final answer",
+        "explanation": "最終回答。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-10",
+    "category": "business_presentation",
+    "jp_text": "このプロジェクトが成功すれば、年間で約2億円のコスト削減につながります。",
+    "model_answers": [
+      "If this project succeeds, it will lead to annual cost savings of about 200 million yen."
+    ],
+    "expressions": [
+      {
+        "phrase": "lead to",
+        "explanation": "〜につながる。"
+      },
+      {
+        "phrase": "cost savings",
+        "explanation": "コスト削減額。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-10",
+    "category": "daily_travel",
+    "jp_text": "一番近い駅までのタクシー代は、いくらくらいですか。",
+    "model_answers": [
+      "About how much is a taxi to the nearest station?"
+    ],
+    "expressions": [
+      {
+        "phrase": "About how much",
+        "explanation": "おおよそいくら。"
+      },
+      {
+        "phrase": "the nearest",
+        "explanation": "一番近い。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-10",
+    "category": "daily_dining",
+    "jp_text": "このシャツの、もう少し大きいサイズはありますか。",
+    "model_answers": [
+      "Do you have this shirt in a larger size?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Do you have this in ...?",
+        "explanation": "これの〜はありますか。サイズや色を尋ねる型。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-11",
+    "category": "business_negotiation",
+    "jp_text": "こちらの提案に対して、率直なご意見をいただけますか。",
+    "model_answers": [
+      "Could you give us your honest feedback on our proposal?"
+    ],
+    "expressions": [
+      {
+        "phrase": "honest feedback",
+        "explanation": "率直な意見。"
+      },
+      {
+        "phrase": "on our proposal",
+        "explanation": "私たちの提案について。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-11",
+    "category": "business_presentation",
+    "jp_text": "先ほどの内容を踏まえて、次のステップを提案します。",
+    "model_answers": [
+      "Based on what I just covered, I'd like to propose the next steps."
+    ],
+    "expressions": [
+      {
+        "phrase": "propose",
+        "explanation": "提案する。"
+      },
+      {
+        "phrase": "next steps",
+        "explanation": "次のステップ。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-11",
+    "category": "daily_travel",
+    "jp_text": "ここで写真を撮ってもいいですか。",
+    "model_answers": [
+      "Is it okay to take photos here?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Is it okay to ...?",
+        "explanation": "〜してもいいですか。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-11",
+    "category": "daily_dining",
+    "jp_text": "試着してもいいですか。",
+    "model_answers": [
+      "Can I try this on?"
+    ],
+    "expressions": [
+      {
+        "phrase": "try on",
+        "explanation": "試着する。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-12",
+    "category": "business_negotiation",
+    "jp_text": "リスクを分け合う形であれば、合意できると思います。",
+    "model_answers": [
+      "I think we can agree if we share the risk."
+    ],
+    "expressions": [
+      {
+        "phrase": "share the risk",
+        "explanation": "リスクを分担する。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-12",
+    "category": "business_presentation",
+    "jp_text": "ご覧のとおり、導入後に処理時間が半分になりました。",
+    "model_answers": [
+      "As you can see, processing time was cut in half after implementation."
+    ],
+    "expressions": [
+      {
+        "phrase": "As you can see",
+        "explanation": "ご覧のとおり。"
+      },
+      {
+        "phrase": "cut in half",
+        "explanation": "半分に減らす。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-12",
+    "category": "daily_travel",
+    "jp_text": "フライトが2時間遅れると聞きました。",
+    "model_answers": [
+      "I heard that my flight is delayed by two hours."
+    ],
+    "expressions": [
+      {
+        "phrase": "be delayed by",
+        "explanation": "〜遅れる。"
+      },
+      {
+        "phrase": "I heard that",
+        "explanation": "〜と聞きました。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-12",
+    "category": "daily_dining",
+    "jp_text": "もう少し安いものを探しています。",
+    "model_answers": [
+      "I'm looking for something a bit cheaper."
+    ],
+    "expressions": [
+      {
+        "phrase": "I'm looking for",
+        "explanation": "〜を探しています。"
+      },
+      {
+        "phrase": "a bit cheaper",
+        "explanation": "もう少し安い。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-13",
+    "category": "business_negotiation",
+    "jp_text": "譲れない点が二つあります。品質と納期です。",
+    "model_answers": [
+      "There are two points we can't compromise on, which are quality and delivery time."
+    ],
+    "expressions": [
+      {
+        "phrase": "compromise on",
+        "explanation": "〜で妥協する。"
+      },
+      {
+        "phrase": "non-negotiable",
+        "explanation": "交渉の余地がない。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-13",
+    "category": "business_presentation",
+    "jp_text": "ここで少し、事例をご紹介します。",
+    "model_answers": [
+      "Let me share a quick case study here."
+    ],
+    "expressions": [
+      {
+        "phrase": "case study",
+        "explanation": "事例。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-13",
+    "category": "daily_travel",
+    "jp_text": "観光客向けの一日ツアーはありますか。",
+    "model_answers": [
+      "Do you have any one-day tours for tourists?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Do you have any ...?",
+        "explanation": "〜はありますか。"
+      },
+      {
+        "phrase": "for tourists",
+        "explanation": "観光客向けの。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-13",
+    "category": "daily_dining",
+    "jp_text": "現金とカードのどちらでも支払えますか。",
+    "model_answers": [
+      "Can I pay by either cash or card?"
+    ],
+    "expressions": [
+      {
+        "phrase": "pay by card",
+        "explanation": "カードで支払う。"
+      },
+      {
+        "phrase": "either A or B",
+        "explanation": "AかBのどちらでも。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-14",
+    "category": "business_negotiation",
+    "jp_text": "この件は一旦保留にして、他の論点から先に詰めませんか。",
+    "model_answers": [
+      "Shall we put this on hold and work out the other points first?"
+    ],
+    "expressions": [
+      {
+        "phrase": "put ... on hold",
+        "explanation": "保留にする。"
+      },
+      {
+        "phrase": "work out",
+        "explanation": "細部を詰める。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-14",
+    "category": "business_presentation",
+    "jp_text": "要点を3行でまとめると、次のようになります。",
+    "model_answers": [
+      "To sum up in three lines, it comes down to the following."
+    ],
+    "expressions": [
+      {
+        "phrase": "come down to",
+        "explanation": "結局〜に行き着く。"
+      },
+      {
+        "phrase": "sum up",
+        "explanation": "要約する。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-14",
+    "category": "daily_travel",
+    "jp_text": "朝食は何時から食べられますか。",
+    "model_answers": [
+      "What time does breakfast start?"
+    ],
+    "expressions": [
+      {
+        "phrase": "What time does ... start?",
+        "explanation": "何時に始まりますか。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-14",
+    "category": "daily_dining",
+    "jp_text": "返品や交換はできますか。",
+    "model_answers": [
+      "Is it possible to return or exchange this?"
+    ],
+    "expressions": [
+      {
+        "phrase": "return or exchange",
+        "explanation": "返品または交換。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-15",
+    "category": "business_negotiation",
+    "jp_text": "合意内容を、あらためて書面で確認させてください。",
+    "model_answers": [
+      "Let me confirm our agreement in writing once more."
+    ],
+    "expressions": [
+      {
+        "phrase": "in writing",
+        "explanation": "書面で。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-15",
+    "category": "business_presentation",
+    "jp_text": "こちらの数字は、あくまで暫定値であることにご留意ください。",
+    "model_answers": [
+      "Please keep in mind that these figures are only preliminary."
+    ],
+    "expressions": [
+      {
+        "phrase": "keep in mind",
+        "explanation": "留意する。"
+      },
+      {
+        "phrase": "preliminary",
+        "explanation": "暫定の。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-15",
+    "category": "daily_travel",
+    "jp_text": "Wi-Fiのパスワードを教えてください。",
+    "model_answers": [
+      "Could you tell me the Wi-Fi password?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Could you tell me",
+        "explanation": "教えていただけますか。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-15",
+    "category": "daily_dining",
+    "jp_text": "ちょっと見ているだけです。ありがとうございます。",
+    "model_answers": [
+      "I'm just looking, thank you."
+    ],
+    "expressions": [
+      {
+        "phrase": "I'm just looking",
+        "explanation": "見ているだけです。店員への定番の返し。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-16",
+    "category": "business_negotiation",
+    "jp_text": "もう少し柔軟に対応していただけると大変助かります。",
+    "model_answers": [
+      "We would really appreciate it if you could be a bit more flexible."
+    ],
+    "expressions": [
+      {
+        "phrase": "We would appreciate it if",
+        "explanation": "〜していただけるとありがたい。"
+      },
+      {
+        "phrase": "flexible",
+        "explanation": "柔軟な。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-16",
+    "category": "business_presentation",
+    "jp_text": "ご不明な点がありましたら、途中でも遠慮なくお声がけください。",
+    "model_answers": [
+      "If anything is unclear, please feel free to stop me at any point."
+    ],
+    "expressions": [
+      {
+        "phrase": "feel free to",
+        "explanation": "遠慮なく〜してください。"
+      },
+      {
+        "phrase": "stop me",
+        "explanation": "私の話を止める、声をかける。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-16",
+    "category": "daily_travel",
+    "jp_text": "免税の手続きはどこでできますか。",
+    "model_answers": [
+      "Where can I get a tax refund?"
+    ],
+    "expressions": [
+      {
+        "phrase": "tax refund",
+        "explanation": "免税、税金の払い戻し。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-16",
+    "category": "daily_dining",
+    "jp_text": "ごちそうさまでした。とてもおいしかったです。",
+    "model_answers": [
+      "Thank you for the meal. Everything was delicious."
+    ],
+    "expressions": [
+      {
+        "phrase": "Everything was delicious",
+        "explanation": "どれもおいしかった。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-17",
+    "category": "business_negotiation",
+    "jp_text": "御社の事情は理解していますので、少し歩み寄れると思います。",
+    "model_answers": [
+      "We understand your situation, so I think we can meet you halfway."
+    ],
+    "expressions": [
+      {
+        "phrase": "meet ... halfway",
+        "explanation": "歩み寄る。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-17",
+    "category": "business_presentation",
+    "jp_text": "市場の変化に迅速に対応することが、今後の成長の鍵になります。",
+    "model_answers": [
+      "Responding quickly to market changes will be the key to our future growth."
+    ],
+    "expressions": [
+      {
+        "phrase": "the key to",
+        "explanation": "〜の鍵。"
+      },
+      {
+        "phrase": "respond to",
+        "explanation": "〜に対応する。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-17",
+    "category": "daily_travel",
+    "jp_text": "スーツケースが届いていません。確認してもらえますか。",
+    "model_answers": [
+      "My suitcase hasn't arrived. Could you check on it?"
+    ],
+    "expressions": [
+      {
+        "phrase": "check on",
+        "explanation": "状況を確認する。"
+      },
+      {
+        "phrase": "hasn't arrived",
+        "explanation": "まだ届いていない。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-17",
+    "category": "daily_dining",
+    "jp_text": "ここは私がおごります。",
+    "model_answers": [
+      "It's on me.",
+      "This one's on me."
+    ],
+    "expressions": [
+      {
+        "phrase": "It's on me",
+        "explanation": "私のおごり。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-18",
+    "category": "business_negotiation",
+    "jp_text": "この金額は、市場価格と比べて高いように感じます。",
+    "model_answers": [
+      "This amount feels high compared with the market price."
+    ],
+    "expressions": [
+      {
+        "phrase": "market price",
+        "explanation": "市場価格。"
+      },
+      {
+        "phrase": "feels high",
+        "explanation": "高く感じる。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-18",
+    "category": "business_presentation",
+    "jp_text": "最後に、本日の内容を簡単に振り返ります。",
+    "model_answers": [
+      "Finally, let me briefly recap today's content."
+    ],
+    "expressions": [
+      {
+        "phrase": "recap",
+        "explanation": "要点を振り返る。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-18",
+    "category": "daily_travel",
+    "jp_text": "この道をまっすぐ行って、二つ目の角を右に曲がってください。",
+    "model_answers": [
+      "Go straight down this street and turn right at the second corner."
+    ],
+    "expressions": [
+      {
+        "phrase": "turn right at",
+        "explanation": "〜で右に曲がる。"
+      },
+      {
+        "phrase": "go straight",
+        "explanation": "まっすぐ進む。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-18",
+    "category": "daily_dining",
+    "jp_text": "割り勘にしませんか。",
+    "model_answers": [
+      "Why don't we split the bill?"
+    ],
+    "expressions": [
+      {
+        "phrase": "split the bill",
+        "explanation": "割り勘にする。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-19",
+    "category": "business_negotiation",
+    "jp_text": "お時間をいただき、ありがとうございました。前向きに進められそうです。",
+    "model_answers": [
+      "Thank you for your time. I think we can move forward positively."
+    ],
+    "expressions": [
+      {
+        "phrase": "move forward",
+        "explanation": "前に進める。"
+      },
+      {
+        "phrase": "Thank you for your time",
+        "explanation": "面談の締めの定型。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-19",
+    "category": "business_presentation",
+    "jp_text": "ご清聴ありがとうございました。ご質問をお待ちしております。",
+    "model_answers": [
+      "Thank you for listening. I'd be happy to take any questions."
+    ],
+    "expressions": [
+      {
+        "phrase": "I'd be happy to",
+        "explanation": "喜んで〜します。"
+      },
+      {
+        "phrase": "Thank you for listening",
+        "explanation": "発表の締めの定型。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-19",
+    "category": "daily_travel",
+    "jp_text": "旅行はどうでしたか。楽しめましたか。",
+    "model_answers": [
+      "How was your trip? Did you enjoy it?"
+    ],
+    "expressions": [
+      {
+        "phrase": "How was your trip?",
+        "explanation": "旅行後の定番質問。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-19",
+    "category": "daily_dining",
+    "jp_text": "飲み物のおかわりはいかがですか。",
+    "model_answers": [
+      "Would you like another drink?"
+    ],
+    "expressions": [
+      {
+        "phrase": "Would you like another",
+        "explanation": "もう一つ、もう一杯いかがですか。"
+      }
+    ]
+  },
+  {
+    "id": "negotiation-20",
+    "category": "business_negotiation",
+    "jp_text": "次回までに、お互いにやるべきことを確認しておきましょう。",
+    "model_answers": [
+      "Let's make sure we're clear on each side's follow-ups before next time."
+    ],
+    "expressions": [
+      {
+        "phrase": "follow-up",
+        "explanation": "フォローアップ、後続対応。"
+      },
+      {
+        "phrase": "be clear on",
+        "explanation": "〜をはっきり理解している。"
+      }
+    ]
+  },
+  {
+    "id": "presentation-20",
+    "category": "business_presentation",
+    "jp_text": "詳細な資料は、後ほどお送りいたします。",
+    "model_answers": [
+      "I'll send you the detailed materials afterwards."
+    ],
+    "expressions": [
+      {
+        "phrase": "detailed materials",
+        "explanation": "詳細資料。"
+      },
+      {
+        "phrase": "afterwards",
+        "explanation": "後ほど。"
+      }
+    ]
+  },
+  {
+    "id": "daily-travel-20",
+    "category": "daily_travel",
+    "jp_text": "次の停留所で降ります。",
+    "model_answers": [
+      "I'll get off at the next stop."
+    ],
+    "expressions": [
+      {
+        "phrase": "get off",
+        "explanation": "乗り物を降りる。"
+      }
+    ]
+  },
+  {
+    "id": "daily-dining-20",
+    "category": "daily_dining",
+    "jp_text": "このお店、予約が取りにくいことで有名なんだ。",
+    "model_answers": [
+      "This restaurant is famous for being hard to get into.",
+      "It's known for being hard to book."
+    ],
+    "expressions": [
+      {
+        "phrase": "be famous for",
+        "explanation": "〜で有名。"
+      },
+      {
+        "phrase": "hard to get into",
+        "explanation": "入りにくい、予約が取りにくい。"
+      }
     ]
   }
 ]

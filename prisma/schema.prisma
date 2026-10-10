@@ -83,9 +83,18 @@ model CompositionPrompt {
   category     String
   jpText       String
   modelAnswers String // JSON配列
+  expressions  String @default("[]") // 頻出・便利表現の解説(JSON配列 [{phrase, explanation}])
 
   attempts    CompositionAttempt[]
-  reviewQueue CompositionReviewQueue?
+  reviewQueue CompositionReviewQueue? // 旧・自動復習キュー(現在は未使用。「要復習」フラグ方式に置き換え)
+  flag        CompositionFlag?
+}
+
+/** 「要復習」フラグを付けたお題。復習パートで出題する */
+model CompositionFlag {
+  prompt    CompositionPrompt @relation(fields: [promptId], references: [id], onDelete: Cascade)
+  promptId  String            @id
+  flaggedAt DateTime          @default(now())
 }
 
 /** カテゴリ(または全体)ごとの「前回どこまで新規で出題したか」の進捗ポインタ。次回はこの続きから出題する */

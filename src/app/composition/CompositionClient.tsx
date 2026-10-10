@@ -2,8 +2,12 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
+  fetchCompositionSummaryAction,
   fetchNextCompositionPromptAction,
+  setCompositionFlagAction,
   submitCompositionAttemptAction,
+  type CompositionExpression,
+  type CompositionMode,
 } from "@/lib/actions/composition-actions";
 import { useSpeechRecognition } from "@/hooks/useSpeechRecognition";
 
@@ -11,12 +15,21 @@ interface Prompt {
   id: string;
   category: string;
   jpText: string;
+  flagged: boolean;
 }
 
 interface Result {
   score: number;
   feedback: string;
   modelAnswers: string[];
+  expressions: CompositionExpression[];
+  flagged: boolean;
+}
+
+interface Summary {
+  total: number;
+  newRemaining: number;
+  reviewCount: number;
 }
 
 const THINK_SECONDS = 5;
@@ -26,16 +39,29 @@ const CATEGORY_LABELS: Record<string, string> = {
   structured_discussion: "構造化発言",
   data_evidence: "データ・論拠の提示",
   rebuttal_softening: "反論・軟化表現",
+  business_negotiation: "ビジネス・交渉",
+  business_presentation: "ビジネス・プレゼン",
   daily_smalltalk: "日常会話・雑談",
   daily_requests: "日常会話・お願い",
   daily_opinions: "日常会話・意見",
   daily_plans: "日常会話・予定調整",
+  daily_travel: "日常会話・旅行",
+  daily_dining: "日常会話・食事と買い物",
+};
+
+const MODE_LABELS: Record<CompositionMode, string> = {
+  new: "新規問題パート",
+  review: "復習パート",
 };
 
 export function CompositionClient() {
+  const [mode, setMode] = useState<CompositionMode | null>(null);
+  const [summary, setSummary] = useState<Summary | null>(null);
   const [prompt, setPrompt] = useState<Prompt | null>(null);
+  const [flagged, setFlagged] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [noMorePrompts, setNoMorePrompts] = useState(false);
   const [phase, setPhase] = useState<
     "countdown" | "listening" | "scoring" | "result"
   >("countdown");
@@ -46,16 +72,9 @@ export function CompositionClient() {
   const speech = useSpeechRecognition("en-US");
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const loadPrompt = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    setResult(null);
-    setAnswer("");
-    setPhase("countdown");
-    setSecondsLeft(THINK_SECONDS);
+  const refreshSummary = useCallback(async () => {
     try {
-      const p = await fetchNextCompositionPromptAction();
-      setPrompt(p);
+      setSummary(await fetchCompositionSummaryAction());
     } catch (err) {
       setError(String((err as Error).message ?? err));
     } finally {
@@ -64,8 +83,44 @@ export function CompositionClient() {
   }, []);
 
   useEffect(() => {
-    loadPrompt();
-  }, [loadPrompt]);
+    refreshSummary();
+  }, [refreshSummary]);
+
+  const loadPrompt = useCallback(async (nextMode: CompositionMode, excludeId?: string) => {
+    setLoading(true);
+    setError(null);
+    setResult(null);
+    setAnswer("");
+    setPhase("countdown");
+    setSecondsLeft(THINK_SECONDS);
+    setNoMorePrompts(false);
+    try {
+      const p = await fetchNextCompositionPromptAction(nextMode, excludeId);
+      setPrompt(p);
+      setFlagged(p?.flagged ?? false);
+      setNoMorePrompts(p === null);
+    } catch (err) {
+      setError(String((err as Error).message ?? err));
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  function startMode(nextMode: CompositionMode) {
+    setMode(nextMode);
+    loadPrompt(nextMode);
+  }
+
+  function backToMenu() {
+    speech.stop();
+    setMode(null);
+    setPrompt(null);
+    setResult(null);
+    setNoMorePrompts(false);
+    setError(null);
+    setLoading(true);
+    refreshSummary();
+  }
 
   // タイピングフォールバック未対応(マイク非対応ブラウザ)なら自動でテキスト入力に切り替え
   useEffect(() => {
@@ -91,7 +146,7 @@ export function CompositionClient() {
 
   // カウントダウン → 自動でマイク聞き取り開始(音声優先フロー)
   useEffect(() => {
-    if (phase !== "countdown" || loading) return;
+    if (phase !== "countdown" || loading || !prompt) return;
     if (secondsLeft <= 0) {
       if (useTyping) {
         setPhase("listening"); // タイピングモードでも同じフェーズ名を使い回す
@@ -107,7 +162,7 @@ export function CompositionClient() {
     const timer = setTimeout(() => setSecondsLeft((s) => s - 1), 1000);
     return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, secondsLeft, loading, useTyping]);
+  }, [phase, secondsLeft, loading, useTyping, prompt]);
 
   function handleMicRetry() {
     if (speech.isListening) {
@@ -126,25 +181,140 @@ export function CompositionClient() {
     if (useTyping) setTimeout(() => inputRef.current?.focus(), 0);
   }
 
-  if (loading) return <p className="text-slate-400">読み込み中…</p>;
-  if (error) return <p className="text-rose-400">{error}</p>;
-  if (!prompt) return null;
+  async function handleToggleFlag() {
+    if (!prompt) return;
+    const next = !flagged;
+    setFlagged(next);
+    try {
+      await setCompositionFlagAction(prompt.id, next);
+    } catch (err) {
+      setFlagged(!next);
+      setError(String((err as Error).message ?? err));
+    }
+  }
 
-  return (
-    <div className="space-y-6 pb-4">
-      <div className="flex items-center justify-between">
+  // ── モード選択画面 ──
+  if (mode === null) {
+    return (
+      <div className="space-y-4">
         <a href="/" className="text-sm text-slate-400 hover:text-slate-200">
           ← 戻る
         </a>
-        <span className="text-xs px-2 py-1 rounded-full bg-sky-500/15 text-sky-300">
-          {CATEGORY_LABELS[prompt.category] ?? prompt.category}
+        <h2 className="text-lg font-semibold text-slate-100">瞬間英作文</h2>
+        {loading && <p className="text-slate-400">読み込み中…</p>}
+        {error && <p className="text-rose-400">{error}</p>}
+        {summary && (
+          <div className="space-y-3">
+            <button
+              type="button"
+              disabled={summary.reviewCount === 0}
+              onClick={() => startMode("review")}
+              className="w-full text-left rounded-xl border border-slate-700 bg-slate-800/60 hover:border-amber-400 disabled:opacity-50 disabled:hover:border-slate-700 p-5 transition-colors"
+            >
+              <p className="font-semibold text-slate-100 text-lg">🚩 復習パート</p>
+              <p className="text-sm text-slate-400 mt-1">「要復習」を付けた問題だけを出題します</p>
+              <p className="text-sm text-amber-300 mt-2">
+                {summary.reviewCount > 0
+                  ? `要復習 ${summary.reviewCount}問`
+                  : "要復習の問題はまだありません"}
+              </p>
+            </button>
+            <button
+              type="button"
+              disabled={summary.newRemaining === 0}
+              onClick={() => startMode("new")}
+              className="w-full text-left rounded-xl border border-slate-700 bg-slate-800/60 hover:border-sky-400 disabled:opacity-50 disabled:hover:border-slate-700 p-5 transition-colors"
+            >
+              <p className="font-semibold text-slate-100 text-lg">🆕 新規問題パート</p>
+              <p className="text-sm text-slate-400 mt-1">前回の続きから、未実施の問題を順番に出題します</p>
+              <p className="text-sm text-sky-300 mt-2">
+                {summary.newRemaining > 0
+                  ? `未実施 ${summary.newRemaining}問 / 全${summary.total}問`
+                  : "全ての問題を実施済みです"}
+              </p>
+            </button>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // ── 出題画面 ──
+  const header = (
+    <div className="flex items-center justify-between">
+      <button
+        type="button"
+        onClick={backToMenu}
+        className="text-sm text-slate-400 hover:text-slate-200"
+      >
+        ← モード選択
+      </button>
+      <div className="flex items-center gap-2">
+        <span className="text-xs px-2 py-1 rounded-full bg-slate-700 text-slate-200">
+          {MODE_LABELS[mode]}
         </span>
+        {prompt && (
+          <span className="text-xs px-2 py-1 rounded-full bg-sky-500/15 text-sky-300">
+            {CATEGORY_LABELS[prompt.category] ?? prompt.category}
+          </span>
+        )}
+      </div>
+    </div>
+  );
+
+  if (loading) return <p className="text-slate-400">読み込み中…</p>;
+  if (error && !prompt) {
+    return (
+      <div className="space-y-4">
+        {header}
+        <p className="text-rose-400">{error}</p>
+      </div>
+    );
+  }
+  if (noMorePrompts || !prompt) {
+    return (
+      <div className="space-y-4">
+        {header}
+        <p className="text-slate-300 py-8 text-center">
+          {mode === "review"
+            ? "復習対象の問題はありません。"
+            : "新規問題を全て実施しました。復習パートで振り返りましょう。"}
+        </p>
+        <button
+          type="button"
+          onClick={backToMenu}
+          className="w-full rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold py-3 transition-colors"
+        >
+          モード選択に戻る
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-6 pb-4">
+      {header}
+
+      <div className="rounded-xl border border-slate-700 bg-slate-800/60 p-5 text-center space-y-3">
+        <div>
+          <p className="text-xs text-slate-400 mb-2">この文を英語にしてください</p>
+          <p className="text-xl font-semibold text-slate-100">{prompt.jpText}</p>
+        </div>
+        <button
+          type="button"
+          onClick={handleToggleFlag}
+          aria-pressed={flagged}
+          className={`text-sm rounded-full px-4 py-1.5 border transition-colors ${
+            flagged
+              ? "border-amber-400 bg-amber-500/20 text-amber-200"
+              : "border-slate-600 text-slate-300 hover:border-amber-400 hover:text-amber-200"
+          }`}
+        >
+          {flagged ? "🚩 要復習に登録済み(タップで解除)" : "⚑ 要復習にする"}
+        </button>
       </div>
 
-      <div className="rounded-xl border border-slate-700 bg-slate-800/60 p-5 text-center">
-        <p className="text-xs text-slate-400 mb-2">この文を英語にしてください</p>
-        <p className="text-xl font-semibold text-slate-100">{prompt.jpText}</p>
-      </div>
+      {error && <p className="text-rose-400 text-sm">{error}</p>}
 
       {phase === "countdown" && (
         <div className="text-center">
@@ -171,7 +341,9 @@ export function CompositionClient() {
                 🎤
               </button>
               <p className="text-xs text-slate-400">
-                {speech.isListening ? "聞き取り中…話し終わると自動で採点します" : "タップして話す"}
+                {speech.isListening
+                  ? "聞き取り中…話し終えたらマイクをタップして停止し、採点してください"
+                  : "タップして話す"}
               </p>
               {answer && <p className="text-lg text-slate-100 px-4">{answer}</p>}
               {speech.interimText && (
@@ -255,12 +427,30 @@ export function CompositionClient() {
               </p>
             ))}
           </div>
+          {result.expressions.length > 0 && (
+            <div className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 space-y-3">
+              <p className="text-xs text-amber-300">💡 頻出表現・便利表現</p>
+              <ul className="space-y-2">
+                {result.expressions.map((e) => (
+                  <li key={e.phrase}>
+                    <p className="font-semibold text-slate-100">{e.phrase}</p>
+                    <p className="text-sm text-slate-300">{e.explanation}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {mode === "review" && flagged && (
+            <p className="text-xs text-slate-400 text-center">
+              もう大丈夫と思えたら、上の「要復習」を解除すると復習パートから外れます。
+            </p>
+          )}
           <button
             type="button"
-            onClick={loadPrompt}
+            onClick={() => loadPrompt(mode, prompt.id)}
             className="w-full rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold py-3 transition-colors"
           >
-            次のお題へ
+            {mode === "review" ? "次の復習問題へ" : "次のお題へ"}
           </button>
         </div>
       )}

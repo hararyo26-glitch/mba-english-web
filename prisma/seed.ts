@@ -24,12 +24,14 @@ async function main() {
         category: p.category,
         jpText: p.jp_text,
         modelAnswers: JSON.stringify(p.model_answers),
+        expressions: JSON.stringify(p.expressions ?? []),
       },
       create: {
         id: p.id,
         category: p.category,
         jpText: p.jp_text,
         modelAnswers: JSON.stringify(p.model_answers),
+        expressions: JSON.stringify(p.expressions ?? []),
       },
     });
   }

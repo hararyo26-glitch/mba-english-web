@@ -3,86 +3,96 @@
 import { prisma } from "@/lib/db";
 import { scoreCompositionWithGemini } from "@/lib/gemini";
 
+export type CompositionMode = "new" | "review";
+
+export interface CompositionExpression {
+  phrase: string;
+  explanation: string;
+}
+
 const ALL_SCOPE = "__ALL__";
-const MAX_INTERVAL_DAYS = 30;
-const PASS_SCORE = 70;
-// 未実施のお題がまだ残っていても、この確率で復習期限が来たお題を混ぜて出題する
-const REVIEW_INTERLEAVE_PROBABILITY = 0.35;
 
-export async function fetchCompositionCategoriesAction() {
-  const rows = await prisma.compositionPrompt.findMany({
-    select: { category: true },
-    distinct: ["category"],
-  });
-  return rows.map((r) => r.category);
+function parseExpressions(raw: string): CompositionExpression[] {
+  try {
+    return JSON.parse(raw) as CompositionExpression[];
+  } catch {
+    return [];
+  }
 }
 
-function scopeFor(category?: string) {
-  return category ?? ALL_SCOPE;
+async function getProgressSeq() {
+  const progress = await prisma.compositionProgress.findUnique({ where: { scope: ALL_SCOPE } });
+  return progress?.lastSeq ?? 0;
 }
 
-async function findNextUnseen(category: string | undefined, afterSeq: number) {
-  return prisma.compositionPrompt.findFirst({
-    where: { seq: { gt: afterSeq }, ...(category ? { category } : {}) },
-    orderBy: { seq: "asc" },
-  });
-}
-
-async function findDueReviewPrompt(category?: string) {
-  const row = await prisma.compositionReviewQueue.findFirst({
-    where: {
-      nextReviewAt: { lte: new Date() },
-      ...(category ? { prompt: { category } } : {}),
-    },
-    orderBy: { nextReviewAt: "asc" },
-    include: { prompt: true },
-  });
-  return row?.prompt ?? null;
-}
-
-async function randomPrompt(category?: string) {
-  const where = category ? { category } : {};
-  const count = await prisma.compositionPrompt.count({ where });
-  if (count === 0) return null;
-  const skip = Math.floor(Math.random() * count);
-  return prisma.compositionPrompt.findFirst({ where, skip });
+/** モード選択画面用。復習パート(要復習フラグ付き)と新規問題パート(未実施)の残件数 */
+export async function fetchCompositionSummaryAction() {
+  const lastSeq = await getProgressSeq();
+  const [total, newRemaining, reviewCount] = await Promise.all([
+    prisma.compositionPrompt.count(),
+    prisma.compositionPrompt.count({ where: { seq: { gt: lastSeq } } }),
+    prisma.compositionFlag.count(),
+  ]);
+  return { total, newRemaining, reviewCount };
 }
 
 /**
- * 瞬間英作文のお題選定ロジック。
- * - 基本方針: 前回の続き(未実施のお題)を順番に出題する
- * - 未実施のお題がまだあっても、一定確率で復習期限が来たお題を混ぜて出題する(定期復習)
- * - 全お題を一周し終えたら、以後は復習キュー主導になる(全て復習期限に応じて再出題される)
+ * 新規問題パート: 前回の続き(未実施の次の問題)を順番に出題する。
+ * 復習パート: 「要復習」フラグ付きの問題を、最後に取り組んだのが古い順に出題する(直前の問題は避ける)。
+ * 該当する問題が無ければnull。
  */
-export async function fetchNextCompositionPromptAction(category?: string) {
-  const scope = scopeFor(category);
-  const [due, progress] = await Promise.all([
-    findDueReviewPrompt(category),
-    prisma.compositionProgress.findUnique({ where: { scope } }),
-  ]);
-  const next = await findNextUnseen(category, progress?.lastSeq ?? 0);
-
-  let chosen = next;
-  if (next && due) {
-    chosen = Math.random() < REVIEW_INTERLEAVE_PROBABILITY ? due : next;
-  } else if (!next) {
-    chosen = due ?? (await randomPrompt(category));
-  }
-  if (!chosen) return null;
-
-  if (chosen.id === next?.id) {
-    await prisma.compositionProgress.upsert({
-      where: { scope },
-      update: { lastSeq: next.seq },
-      create: { scope, lastSeq: next.seq },
+export async function fetchNextCompositionPromptAction(mode: CompositionMode, excludeId?: string) {
+  if (mode === "new") {
+    const next = await prisma.compositionPrompt.findFirst({
+      where: { seq: { gt: await getProgressSeq() } },
+      orderBy: { seq: "asc" },
+      include: { flag: true },
     });
+    if (!next) return null;
+    return { id: next.id, category: next.category, jpText: next.jpText, flagged: !!next.flag };
   }
 
-  return { id: chosen.id, category: chosen.category, jpText: chosen.jpText };
+  const flags = await prisma.compositionFlag.findMany({ include: { prompt: true } });
+  if (flags.length === 0) return null;
+
+  const lastAttempts = await prisma.compositionAttempt.groupBy({
+    by: ["promptId"],
+    where: { promptId: { in: flags.map((f) => f.promptId) } },
+    _max: { attemptedAt: true },
+  });
+  const lastAt = new Map(lastAttempts.map((a) => [a.promptId, a._max.attemptedAt?.getTime() ?? 0]));
+
+  const sorted = [...flags].sort((a, b) => {
+    const aExcluded = a.promptId === excludeId ? 1 : 0;
+    const bExcluded = b.promptId === excludeId ? 1 : 0;
+    if (aExcluded !== bExcluded) return aExcluded - bExcluded;
+    const diff = (lastAt.get(a.promptId) ?? 0) - (lastAt.get(b.promptId) ?? 0);
+    if (diff !== 0) return diff;
+    return a.flaggedAt.getTime() - b.flaggedAt.getTime();
+  });
+  const picked = sorted[0].prompt;
+  return { id: picked.id, category: picked.category, jpText: picked.jpText, flagged: true };
+}
+
+/** 「要復習」フラグの付け外し */
+export async function setCompositionFlagAction(promptId: string, flagged: boolean) {
+  if (flagged) {
+    await prisma.compositionFlag.upsert({
+      where: { promptId },
+      update: {},
+      create: { promptId },
+    });
+  } else {
+    await prisma.compositionFlag.deleteMany({ where: { promptId } });
+  }
+  return { flagged };
 }
 
 export async function submitCompositionAttemptAction(promptId: string, userAnswer: string) {
-  const prompt = await prisma.compositionPrompt.findUnique({ where: { id: promptId } });
+  const prompt = await prisma.compositionPrompt.findUnique({
+    where: { id: promptId },
+    include: { flag: true },
+  });
   if (!prompt) throw new Error("prompt not found");
 
   const modelAnswers: string[] = JSON.parse(prompt.modelAnswers);
@@ -101,32 +111,20 @@ export async function submitCompositionAttemptAction(promptId: string, userAnswe
     },
   });
 
-  await scheduleCompositionReview(promptId, result.score);
+  // 新規問題パートの「前回の続き」位置を進める(復習パートで古い問題を解いても戻らない)
+  if (prompt.seq > (await getProgressSeq())) {
+    await prisma.compositionProgress.upsert({
+      where: { scope: ALL_SCOPE },
+      update: { lastSeq: prompt.seq },
+      create: { scope: ALL_SCOPE, lastSeq: prompt.seq },
+    });
+  }
 
-  return { score: result.score, feedback: result.feedback, modelAnswers };
-}
-
-/**
- * 答え合わせ後、そのお題の次回復習タイミングを簡易SM-2でスケジュールする。
- * ディクテーションの「間違えたものだけ復習」とは異なり、瞬間英作文は
- * 「実施済みのお題は全て定期的に復習に回す」方針のため、スコアに関わらず必ずキューへ乗せる。
- */
-async function scheduleCompositionReview(promptId: string, score: number) {
-  const passed = score >= PASS_SCORE;
-  const existing = await prisma.compositionReviewQueue.findUnique({ where: { promptId } });
-  const baseInterval = existing?.intervalDays ?? 1;
-  const nextInterval = passed ? Math.min(baseInterval * 2, MAX_INTERVAL_DAYS) : 1;
-  const nextReviewAt = addDays(new Date(), nextInterval);
-
-  await prisma.compositionReviewQueue.upsert({
-    where: { promptId },
-    update: { nextReviewAt, intervalDays: nextInterval },
-    create: { promptId, nextReviewAt, intervalDays: nextInterval },
-  });
-}
-
-function addDays(date: Date, days: number) {
-  const result = new Date(date);
-  result.setDate(result.getDate() + days);
-  return result;
+  return {
+    score: result.score,
+    feedback: result.feedback,
+    modelAnswers,
+    expressions: parseExpressions(prompt.expressions),
+    flagged: !!prompt.flag,
+  };
 }
